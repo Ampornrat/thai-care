@@ -1,0 +1,12 @@
+{
+  "cleanUrls": false,
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/index", "destination": "/index.html" },
+    { "source": "/search", "destination": "/search.html" },
+    { "source": "/eligibility", "destination": "/eligibility.html" },
+    { "source": "/locations", "destination": "/locations.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/program-detail", "destination": "/program-detail.html" }
+  ]
+}

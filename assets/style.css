@@ -1,0 +1,97 @@
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-text {
+    display: inline-block;
+    animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.paused {
+    animation-play-state: paused;
+}
+
+.focus-ring:focus-visible {
+    outline: 3px solid #B07B1E;
+    outline-offset: 2px;
+}
+
+/* Mobile nav drawer */
+.mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+}
+
+.mobile-menu.open {
+    max-height: 480px;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 10px 4px;
+    border-bottom: 1px solid #c4c6d0;
+}
+
+.mobile-menu a:last-child {
+    border-bottom: none;
+}
+
+.mobile-menu a.active {
+    color: #002452;
+    font-weight: 700;
+}
+
+/* Large-text accessibility mode */
+body.a11y-large-text {
+    font-size: 112.5%;
+}
+
+/* Nav active state helper */
+nav a.active {
+    color: #002452;
+    font-weight: 700;
+    border-bottom: 2px solid #002452;
+    padding-bottom: 4px;
+}
+
+html.dark nav a.active {
+    color: #acc7ff;
+    border-bottom-color: #acc7ff;
+}
+
+/* Eligibility wizard step indicators */
+.step-active {
+    background-color: #002452;
+    color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(0, 36, 82, 0.2);
+}
+
+.step-complete {
+    background-color: #fdbe5c;
+    color: #734c00;
+}
+
+.step-inactive {
+    background-color: #f0eded;
+    color: #44474f;
+    border: 2px solid #c4c6d0;
+}
+
+.wizard-step {
+    display: none;
+}
+
+.wizard-step.active {
+    display: block;
+}

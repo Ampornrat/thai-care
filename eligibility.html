@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html class="light" lang="th">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ตรวจสอบสิทธิ์ - ไทย Care</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="assets/tailwind-config.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&family=Atkinson+Hyperlegible+Next:wght@400;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@100..900&family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet"/>
+<link href="assets/style.css" rel="stylesheet"/>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container selection:text-on-secondary-fixed">
+<a class="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:bg-primary focus:text-on-primary focus:px-4 focus:py-2" href="#main-content">
+    ข้ามไปที่เนื้อหาหลัก
+</a>
+<header class="bg-surface dark:bg-surface-container border-b-2 border-outline-variant dark:border-outline sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto h-20">
+<a class="flex items-center gap-4 focus-ring rounded" href="index.html">
+<div class="w-10 h-10 bg-primary flex items-center justify-center rounded">
+<span class="material-symbols-outlined text-on-primary" style="font-variation-settings: 'FILL' 1;">diversity_1</span>
+</div>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary leading-none">ไทย Care</h1>
+</a>
+<nav aria-label="เมนูหลัก" class="hidden lg:flex items-center gap-6">
+<a class="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="index.html">หน้าหลัก</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="search.html">ค้นหาสวัสดิการ</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="eligibility.html">ตรวจสอบสิทธิ์</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="locations.html">จุดบริการ</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="contact.html">ติดต่อเรา</a>
+</nav>
+<div class="flex items-center gap-2">
+<button aria-label="สลับความต่างสี" class="p-2 hover:bg-surface-container-high rounded-full focus-ring transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="contrast">contrast</span>
+</button>
+<button aria-label="ปรับขนาดตัวอักษร" class="p-2 hover:bg-surface-container-high rounded-full focus-ring transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="format_size">format_size</span>
+</button>
+<div class="hidden md:flex flex-col items-end ml-4 border-l-2 border-outline-variant pl-4">
+<span class="text-[12px] font-bold text-on-surface-variant uppercase">สายด่วนรัฐบาล</span>
+<span class="font-hotline-display text-hotline-display text-primary leading-none">1111</span>
+</div>
+<button aria-expanded="false" aria-label="เปิดเมนู" class="lg:hidden p-2 hover:bg-surface-container-high rounded-full focus-ring transition-colors" id="mobileMenuBtn">
+<span class="material-symbols-outlined text-primary">menu</span>
+</button>
+</div>
+</div>
+<nav aria-label="เมนูมือถือ" class="mobile-menu lg:hidden border-t border-outline-variant bg-surface" id="mobileMenu">
+<div class="flex flex-col px-margin-mobile py-2">
+<a class="font-label-md text-label-md text-on-surface-variant" href="index.html">หน้าหลัก</a>
+<a class="font-label-md text-label-md text-on-surface-variant" href="search.html">ค้นหาสวัสดิการ</a>
+<a class="font-label-md text-label-md text-on-surface-variant" href="eligibility.html">ตรวจสอบสิทธิ์</a>
+<a class="font-label-md text-label-md text-on-surface-variant" href="locations.html">จุดบริการ</a>
+<a class="font-label-md text-label-md text-on-surface-variant" href="contact.html">ติดต่อเรา</a>
+</div>
+</nav>
+</header>
+<nav aria-label="breadcrumb" class="max-w-7xl mx-auto w-full px-margin-mobile md:px-margin-desktop py-4 flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
+<a class="hover:underline" href="index.html">หน้าหลัก</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-primary font-bold">ตรวจสอบสิทธิ์สวัสดิการ</span>
+</nav>
+<main class="w-full max-w-3xl mx-auto px-margin-mobile md:px-margin-desktop pb-stack-lg" id="main-content">
+<!-- Header Section -->
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-md text-headline-md text-primary mb-2">ตรวจสอบสิทธิ์สวัสดิการแห่งรัฐ</h2>
+<p class="text-on-surface-variant font-body-md text-body-md">กรุณากรอกข้อมูลตามความเป็นจริงเพื่อผลการตรวจสอบที่แม่นยำ</p>
+</div>
+<!-- Progress Indicator -->
+<div class="mb-12" id="progressIndicator">
+<div class="flex items-center justify-between relative mb-4">
+<div class="absolute top-1/2 left-0 w-full h-0.5 bg-surface-container-highest -z-10 -translate-y-1/2"></div>
+<div class="absolute top-1/2 left-0 h-0.5 bg-primary -z-10 -translate-y-1/2 transition-all duration-500" id="progressLine" style="width: 0%"></div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-bold step-circle" data-step="1">1</div>
+<span class="font-label-md text-[12px] md:text-label-md text-on-surface-variant step-label" data-step="1">ข้อมูลส่วนตัว</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-bold step-circle" data-step="2">2</div>
+<span class="font-label-md text-[12px] md:text-label-md text-on-surface-variant step-label" data-step="2">สถานะครอบครัว</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-bold step-circle" data-step="3">3</div>
+<span class="font-label-md text-[12px] md:text-label-md text-on-surface-variant step-label" data-step="3">ข้อมูลรายได้</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full flex items-center justify-center font-bold step-circle" data-step="4">4</div>
+<span class="font-label-md text-[12px] md:text-label-md text-on-surface-variant step-label" data-step="4">สรุปข้อมูล</span>
+</div>
+</div>
+<p class="text-center font-label-md text-label-md text-on-surface-variant" id="progressCaption">ขั้นตอนที่ 1 จาก 4: ข้อมูลส่วนตัว</p>
+</div>
+<!-- Error Summary -->
+<div class="hidden mb-stack-md p-4 bg-error-container border-l-4 border-error rounded-lg flex gap-4" id="error-box">
+<span class="material-symbols-outlined text-error">error</span>
+<div>
+<p class="font-bold text-on-error-container">กรุณาตรวจสอบข้อมูล</p>
+<ul class="list-disc list-inside text-on-error-container font-label-md text-label-md" id="error-list"></ul>
+</div>
+</div>
+<!-- Wizard -->
+<form class="bg-surface-container-lowest border-2 border-outline-variant p-6 md:p-8 rounded-xl shadow-sm space-y-8" id="eligibility-form">
+<!-- Step 1: Personal Info -->
+<div class="wizard-step active space-y-8" data-step="1">
+<div class="space-y-2">
+<label class="block font-headline-md text-[20px] text-primary font-bold" for="citizen_id">1. เลขบัตรประชาชน (13 หลัก) <span class="text-error">*</span></label>
+<input class="w-full h-touch-target px-4 border-2 border-outline-variant rounded-lg focus:ring-3 focus:ring-secondary focus:border-secondary outline-none transition-all" id="citizen_id" inputmode="numeric" maxlength="13" placeholder="เช่น 1103700xxxxxx" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block font-headline-md text-[20px] text-primary font-bold" for="full_name">2. ชื่อ-นามสกุล <span class="text-error">*</span></label>
+<input class="w-full h-touch-target px-4 border-2 border-outline-variant rounded-lg focus:ring-3 focus:ring-secondary focus:border-secondary outline-none transition-all" id="full_name" placeholder="ชื่อ นามสกุล" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="block font-headline-md text-[20px] text-primary font-bold" for="age">3. อายุ (ปี) <span class="text-error">*</span></label>
+<input class="w-full h-touch-target px-4 border-2 border-outline-variant rounded-lg focus:ring-3 focus:ring-secondary focus:border-secondary outline-none transition-all" id="age" max="120" min="0" placeholder="0" type="number"/>
+</div>
+<div class="space-y-2">
+<label class="block font-headline-md text-[20px] text-primary font-bold" for="province">4. จังหวัดตามทะเบียนบ้าน <span class="text-error">*</span></label>
+<select class="w-full h-touch-target px-4 border-2 border-outline-variant rounded-lg focus:ring-3 focus:ring-secondary focus:border-secondary outline-none transition-all" id="province">
+<option value="">เลือกจังหวัด</option>
+</select>
+</div>
+</div>
+<fieldset class="space-y-4">
+<legend class="font-headline-md text-[20px] text-primary font-bold">5. ท่านมีบัตรประจำตัวคนพิการหรือไม่ <span class="text-error">*</span></legend>
+<div class="flex flex-col md:flex-row gap-4">
+<label class="flex-1 flex items-center gap-4 p-4 border-2 border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container transition-colors focus-within:ring-3 focus-within:ring-secondary">
+<input class="w-5 h-5 text-secondary border-outline focus:ring-secondary" name="has_disability_card" type="radio" value="yes"/>
+<span class="font-body-md text-on-surface">มี</span>
+</label>
+<label class="flex-1 flex items-center gap-4 p-4 border-2 border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container transition-colors focus-within:ring-3 focus-within:ring-secondary">
+<input class="w-5 h-5 text-secondary border-outline focus:ring-secondary" name="has_disability_card" type="radio" value="no"/>
+<span class="font-body-md text-on-surface">ไม่มี</span>
+</label>
+</div>
+</fieldset>
+</div>
+<!-- Step 2: Family Status -->
+<div class="wizard-step space-y-8" data-step="2">
+<fieldset class="space-y-4">
+<legend class="font-headline-md text-[20px] text-primary font-bold">1. สถานภาพการสมรส <span class="text-error">*</span></legend>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<label class="flex items-center gap-4 p-4 border-2 border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container transition-colors focus-within:ring-3 focus-within:ring-secondary">
+<input class="w-5 h-5 text-secondary border-outline focus:ring-secondary" name="marital_status" type="radio" value="single"/>
+<span class="font-body-md text-on-surface">โสด</span>
+</label>
+<label class="flex items-center gap-4 p-4 border-2 border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container transition-colors focus-within:ring-3 focus-within:ring-secondary">
+<input class="w-5 h-5 text-secondary border-outline focus:ring-secondary" name="marital_status" type="radio" value="married"/>
+<span class="font-body-md text-on-surface">สมรส (จดทะเบียน)</span>
+</label>
+<label class="flex items-center gap-4 p-4 border-2 border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container transition-colors focus-within:ring-3 focus-within:ring-secondary">
+<input class="w-5 h-5 text-secondary border-outline focus:ring-secondary" name="marital_status" type="radio" value="divorced"/>
+<span class="font-body-md text-on-surface">หย่าร้าง</span>
+</label>
+<label class="flex items-center gap-4 p-4 border-2 border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container transition-colors focus-within:ring-3 focus-within:ring-secondary">
+<input class="w-5 h-5 text-secondary border-outline focus:ring-secondary" name="marital_status" type="radio" value="widowed"/>
+<span class="font-body-md text-on-surface">หม้าย</span>
+</label>
+</div>
+</fieldset>
+<div class="space-y-4">
+<label class="block font-headline-md text-[20px] text-primary font-bold" for="children_count">2. จำนวนบุตร (อายุไม่เกิน 18 ปี) <span class="text-error">*</span></label>
+<p class="text-on-surface-variant font-label-md text-label-md">หากไม่มี ให้ระบุเป็น 0</p>
+<div class="relative max-w-[200px]">
+<input class="w-full h-touch-target px-4 border-2 border-outline-variant rounded-lg focus:ring-3 focus:ring-secondary focus:border-secondary outline-none transition-all" id="children_count" max="20" min="0" placeholder="0" type="number"/>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">คน</div>
+</div>
+</div>
+<fieldset class="space-y-4">
+<legend class="font-headline-md text-[20px] text-primary font-bold">3. การดูแลบุคคลในครอบครัว <span class="text-error">*</span></legend>
+<p class="text-on-surface-variant font-label-md text-label-md">ท่านเป็นผู้ดูแลหลักของบุคคลที่อยู่ในภาวะพึ่งพิง (ผู้สูงอายุ 60 ปีขึ้นไป หรือผู้พิการ) ใช่หรือไม่?</p>
+<div class="flex flex-col md:flex-row gap-4">
+<label class="flex-1 flex items-center gap-4 p-4 border-2 border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container transition-colors focus-within:ring-3 focus-within:ring-secondary">
+<input class="w-5 h-5 text-secondary border-outline focus:ring-secondary" name="care_provider" type="radio" value="yes"/>
+<span class="font-body-md text-on-surface">ใช่ (เป็นผู้ดูแลหลัก)</span>
+</label>
+<label class="flex-1 flex items-center gap-4 p-4 border-2 border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container transition-colors focus-within:ring-3 focus-within:ring-secondary">
+<input class="w-5 h-5 text-secondary border-outline focus:ring-secondary" name="care_provider" type="radio" value="no"/>
+<span class="font-body-md text-on-surface">ไม่ใช่</span>
+</label>
+</div>
+</fieldset>
+</div>
+<!-- Step 3: Income Info -->
+<div class="wizard-step space-y-8" data-step="3">
+<div class="space-y-2">
+<label class="block font-headline-md text-[20px] text-primary font-bold" for="occupation">1. อาชีพ <span class="text-error">*</span></label>
+<select class="w-full h-touch-target px-4 border-2 border-outline-variant rounded-lg focus:ring-3 focus:ring-secondary focus:border-secondary outline-none transition-all" id="occupation">
+<option value="">เลือกอาชีพ</option>
+<option value="government">รับราชการ / รัฐวิสาหกิจ</option>
+<option value="private">พนักงานเอกชน</option>
+<option value="self-employed">อาชีพอิสระ / ค้าขาย</option>
+<option value="farmer">เกษตรกร</option>
+<option value="unemployed">ว่างงาน</option>
+<option value="other">อื่นๆ</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="block font-headline-md text-[20px] text-primary font-bold" for="monthly_income">2. รายได้เฉลี่ยต่อเดือน (บาท) <span class="text-error">*</span></label>
+<input class="w-full h-touch-target px-4 border-2 border-outline-variant rounded-lg focus:ring-3 focus:ring-secondary focus:border-secondary outline-none transition-all" id="monthly_income" min="0" placeholder="0" type="number"/>
+</div>
+<fieldset class="space-y-4">
+<legend class="font-headline-md text-[20px] text-primary font-bold">3. ท่านหรือคู่สมรสเป็นเจ้าของกรรมสิทธิ์ที่ดิน/อสังหาริมทรัพย์หรือไม่ <span class="text-error">*</span></legend>
+<div class="flex flex-col md:flex-row gap-4">
+<label class="flex-1 flex items-center gap-4 p-4 border-2 border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container transition-colors focus-within:ring-3 focus-within:ring-secondary">
+<input class="w-5 h-5 text-secondary border-outline focus:ring-secondary" name="owns_property" type="radio" value="yes"/>
+<span class="font-body-md text-on-surface">เป็นเจ้าของ</span>
+</label>
+<label class="flex-1 flex items-center gap-4 p-4 border-2 border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container transition-colors focus-within:ring-3 focus-within:ring-secondary">
+<input class="w-5 h-5 text-secondary border-outline focus:ring-secondary" name="owns_property" type="radio" value="no"/>
+<span class="font-body-md text-on-surface">ไม่ได้เป็นเจ้าของ</span>
+</label>
+</div>
+</fieldset>
+</div>
+<!-- Step 4: Summary -->
+<div class="wizard-step space-y-6" data-step="4">
+<h3 class="font-headline-md text-[20px] text-primary font-bold">สรุปข้อมูลที่กรอก</h3>
+<p class="text-on-surface-variant font-label-md text-label-md">กรุณาตรวจสอบความถูกต้องของข้อมูลก่อนกดตรวจสอบสิทธิ์</p>
+<dl class="grid grid-cols-1 md:grid-cols-2 gap-4" id="summaryList"></dl>
+<p class="text-on-surface-variant font-label-md text-label-md p-4 bg-surface-container-low rounded-lg flex gap-2">
+<span class="material-symbols-outlined text-[20px] shrink-0">info</span>
+              ผลการตรวจสอบเป็นเพียงข้อมูลเบื้องต้นจากเงื่อนไขทั่วไป ไม่ใช่การยืนยันสิทธิ์อย่างเป็นทางการ กรุณายื่นเอกสารตัวจริงที่จุดบริการเพื่อยืนยันสิทธิ์
+            </p>
+</div>
+<!-- Navigation Buttons -->
+<div class="flex flex-col md:flex-row gap-4 pt-4 border-t border-outline-variant">
+<button class="order-2 md:order-1 flex-1 h-touch-target flex items-center justify-center gap-2 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary-fixed transition-colors active:scale-95 focus:ring-3 focus:ring-secondary outline-none disabled:opacity-40 disabled:cursor-not-allowed" id="backBtn" type="button">
+<span class="material-symbols-outlined">arrow_back</span>
+              ย้อนกลับ
+            </button>
+<button class="order-1 md:order-2 flex-1 h-touch-target flex items-center justify-center gap-2 bg-primary text-on-primary font-bold rounded-lg hover:bg-primary-container transition-colors active:scale-95 shadow-lg focus:ring-3 focus:ring-secondary outline-none" id="nextBtn" type="submit">
+<span id="nextBtnLabel">ถัดไป</span>
+<span class="material-symbols-outlined" id="nextBtnIcon">arrow_forward</span>
+</button>
+</div>
+</form>
+<!-- Result Section -->
+<section class="hidden bg-surface-container-lowest border-2 border-outline-variant p-6 md:p-8 rounded-xl shadow-sm space-y-6" id="resultSection">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[32px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<h3 class="font-headline-md text-headline-md text-primary">ผลการตรวจสอบเบื้องต้น</h3>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md" id="resultSummary"></p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter" id="resultPrograms"></div>
+<div class="flex flex-col md:flex-row gap-4 pt-4 border-t border-outline-variant">
+<button class="flex-1 h-touch-target flex items-center justify-center gap-2 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary-fixed transition-colors focus:ring-3 focus:ring-secondary outline-none" id="restartBtn" type="button">
+<span class="material-symbols-outlined">refresh</span>
+              ตรวจสอบอีกครั้ง
+            </button>
+<a class="flex-1 h-touch-target flex items-center justify-center gap-2 bg-primary text-on-primary font-bold rounded-lg hover:bg-primary-container transition-colors focus:ring-3 focus:ring-secondary outline-none" href="locations.html">
+<span class="material-symbols-outlined">location_on</span>
+              ค้นหาจุดบริการเพื่อยื่นเอกสาร
+            </a>
+</div>
+</section>
+</main>
+<footer class="bg-tertiary dark:bg-tertiary-container text-on-tertiary dark:text-on-tertiary-container border-t-4 border-secondary mt-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop py-stack-lg w-full max-w-7xl mx-auto">
+<div class="md:col-span-5 space-y-4">
+<div class="font-headline-md text-headline-md font-bold text-on-tertiary">ไทย Care</div>
+<p class="font-body-md text-body-md text-tertiary-fixed-dim max-w-sm">
+                    ศูนย์รวมข้อมูลและบริการสวัสดิการภาครัฐ เพื่อความเท่าเทียมและคุณภาพชีวิตที่ดีของคนไทย
+                </p>
+<div class="flex items-start gap-3 text-tertiary-fixed-dim">
+<span class="material-symbols-outlined mt-1">location_on</span>
+<address class="not-italic font-body-md text-body-md">
+                        เลขที่ 1 ถนนพิษณุโลก แขวงดุสิต เขตดุสิต กรุงเทพมหานคร 10300
+                    </address>
+</div>
+</div>
+<div class="md:col-span-4 space-y-4">
+<h4 class="font-label-md text-label-md text-secondary-container uppercase tracking-wider">ช่องทางการติดต่อ</h4>
+<ul class="space-y-3 font-body-md text-body-md">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined">call</span>
+<span class="font-hotline-display">สายด่วน 1111</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined">mail</span>
+<a class="hover:underline hover:text-white transition-colors" href="mailto:contact@thaicare.go.th">contact@thaicare.go.th</a>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined">chat</span>
+<a class="hover:underline hover:text-white transition-colors" href="contact.html">Line Official: @ThaiCareGov</a>
+</li>
+</ul>
+</div>
+<div class="md:col-span-3 space-y-4">
+<h4 class="font-label-md text-label-md text-secondary-container uppercase tracking-wider">ข้อมูลเพิ่มเติม</h4>
+<ul class="space-y-2 font-label-md text-label-md flex flex-col">
+<li><a class="text-tertiary-fixed-dim hover:text-white hover:underline transition-all" href="search.html">ค้นหาสวัสดิการ</a></li>
+<li><a class="text-tertiary-fixed-dim hover:text-white hover:underline transition-all" href="locations.html">จุดบริการทั่วประเทศ</a></li>
+<li><a class="text-tertiary-fixed-dim hover:text-white hover:underline transition-all" href="contact.html">ติดต่อเรา</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/10 py-6">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop text-center text-tertiary-fixed-dim font-label-md text-label-md">
+                © 2024 ไทย Care - พัฒนาเพื่อประชาชนโดยรัฐบาลไทย
+            </div>
+</div>
+</footer>
+<script src="assets/data.js"></script>
+<script>
+    const PROVINCES = [...new Set(SERVICE_POINTS.map((p) => p.province))].sort();
+    const provinceSelect = document.getElementById("province");
+    provinceSelect.innerHTML +=
+      PROVINCES.map((p) => `<option value="${p}">${p}</option>`).join("") +
+      `<option value="other">อื่นๆ</option>`;
+
+    const TOTAL_STEPS = 4;
+    let currentStep = 1;
+
+    const form = document.getElementById("eligibility-form");
+    const errorBox = document.getElementById("error-box");
+    const errorList = document.getElementById("error-list");
+    const backBtn = document.getElementById("backBtn");
+    const nextBtnLabel = document.getElementById("nextBtnLabel");
+    const nextBtnIcon = document.getElementById("nextBtnIcon");
+    const progressLine = document.getElementById("progressLine");
+    const progressCaption = document.getElementById("progressCaption");
+    const resultSection = document.getElementById("resultSection");
+
+    const STEP_NAMES = {
+      1: "ข้อมูลส่วนตัว",
+      2: "สถานะครอบครัว",
+      3: "ข้อมูลรายได้",
+      4: "สรุปข้อมูล",
+    };
+
+    function updateProgress() {
+      progressLine.style.width = `${((currentStep - 1) / (TOTAL_STEPS - 1)) * 100}%`;
+      progressCaption.textContent = `ขั้นตอนที่ ${currentStep} จาก ${TOTAL_STEPS}: ${STEP_NAMES[currentStep]}`;
+
+      document.querySelectorAll(".step-circle").forEach((circle) => {
+        const step = Number(circle.dataset.step);
+        circle.classList.remove("step-active", "step-complete", "step-inactive");
+        circle.textContent = step;
+        if (step < currentStep) {
+          circle.classList.add("step-complete");
+          circle.innerHTML = '<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: \'wght\' 700;">check</span>';
+        } else if (step === currentStep) {
+          circle.classList.add("step-active");
+        } else {
+          circle.classList.add("step-inactive");
+        }
+      });
+
+      document.querySelectorAll(".step-label").forEach((label) => {
+        const step = Number(label.dataset.step);
+        label.classList.toggle("text-primary", step === currentStep);
+        label.classList.toggle("font-bold", step === currentStep);
+        label.classList.toggle("text-on-surface-variant", step !== currentStep);
+      });
+    }
+
+    function showStep(step) {
+      document.querySelectorAll(".wizard-step").forEach((el) => {
+        el.classList.toggle("active", Number(el.dataset.step) === step);
+      });
+      backBtn.disabled = step === 1;
+      nextBtnLabel.textContent = step === TOTAL_STEPS ? "ตรวจสอบสิทธิ์" : "ถัดไป";
+      nextBtnIcon.textContent = step === TOTAL_STEPS ? "fact_check" : "arrow_forward";
+      updateProgress();
+      if (step === TOTAL_STEPS) renderSummary();
+      errorBox.classList.add("hidden");
+      form.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function validateStep(step) {
+      const errors = [];
+      if (step === 1) {
+        const citizenId = document.getElementById("citizen_id").value.trim();
+        if (!/^\d{13}$/.test(citizenId)) errors.push("กรุณาระบุเลขบัตรประชาชนให้ครบ 13 หลัก");
+        if (!document.getElementById("full_name").value.trim()) errors.push("กรุณาระบุชื่อ-นามสกุล");
+        if (document.getElementById("age").value === "") errors.push("กรุณาระบุอายุ");
+        if (!document.getElementById("province").value) errors.push("กรุณาเลือกจังหวัดตามทะเบียนบ้าน");
+        if (!document.querySelector('input[name="has_disability_card"]:checked')) errors.push("กรุณาระบุสถานะบัตรประจำตัวคนพิการ");
+      } else if (step === 2) {
+        if (!document.querySelector('input[name="marital_status"]:checked')) errors.push("กรุณาระบุสถานภาพการสมรส");
+        if (document.getElementById("children_count").value === "") errors.push("กรุณาระบุจำนวนบุตร (หากไม่มีระบุ 0)");
+        if (!document.querySelector('input[name="care_provider"]:checked')) errors.push("กรุณาระบุสถานะการดูแลบุคคลในครอบครัว");
+      } else if (step === 3) {
+        if (!document.getElementById("occupation").value) errors.push("กรุณาเลือกอาชีพ");
+        if (document.getElementById("monthly_income").value === "") errors.push("กรุณาระบุรายได้เฉลี่ยต่อเดือน");
+        if (!document.querySelector('input[name="owns_property"]:checked')) errors.push("กรุณาระบุการถือครองที่ดิน/อสังหาริมทรัพย์");
+      }
+      return errors;
+    }
+
+    function collectData() {
+      return {
+        citizenId: document.getElementById("citizen_id").value.trim(),
+        fullName: document.getElementById("full_name").value.trim(),
+        age: Number(document.getElementById("age").value),
+        province: document.getElementById("province").value,
+        hasDisabilityCard: document.querySelector('input[name="has_disability_card"]:checked')?.value,
+        maritalStatus: document.querySelector('input[name="marital_status"]:checked')?.value,
+        childrenCount: Number(document.getElementById("children_count").value),
+        careProvider: document.querySelector('input[name="care_provider"]:checked')?.value,
+        occupation: document.getElementById("occupation").value,
+        monthlyIncome: Number(document.getElementById("monthly_income").value),
+        ownsProperty: document.querySelector('input[name="owns_property"]:checked')?.value,
+      };
+    }
+
+    const MARITAL_LABELS = { single: "โสด", married: "สมรส (จดทะเบียน)", divorced: "หย่าร้าง", widowed: "หม้าย" };
+    const OCCUPATION_LABELS = {
+      government: "รับราชการ / รัฐวิสาหกิจ",
+      private: "พนักงานเอกชน",
+      "self-employed": "อาชีพอิสระ / ค้าขาย",
+      farmer: "เกษตรกร",
+      unemployed: "ว่างงาน",
+      other: "อื่นๆ",
+    };
+
+    function renderSummary() {
+      const d = collectData();
+      const rows = [
+        ["เลขบัตรประชาชน", d.citizenId],
+        ["ชื่อ-นามสกุล", d.fullName],
+        ["อายุ", `${d.age} ปี`],
+        ["จังหวัด", d.province === "other" ? "อื่นๆ" : d.province],
+        ["บัตรประจำตัวคนพิการ", d.hasDisabilityCard === "yes" ? "มี" : "ไม่มี"],
+        ["สถานภาพการสมรส", MARITAL_LABELS[d.maritalStatus] || "-"],
+        ["จำนวนบุตร", `${d.childrenCount} คน`],
+        ["ผู้ดูแลหลักในครอบครัว", d.careProvider === "yes" ? "ใช่" : "ไม่ใช่"],
+        ["อาชีพ", OCCUPATION_LABELS[d.occupation] || "-"],
+        ["รายได้เฉลี่ยต่อเดือน", `${d.monthlyIncome.toLocaleString()} บาท`],
+        ["ถือครองที่ดิน/อสังหาริมทรัพย์", d.ownsProperty === "yes" ? "เป็นเจ้าของ" : "ไม่ได้เป็นเจ้าของ"],
+      ];
+      document.getElementById("summaryList").innerHTML = rows
+        .map(
+          ([label, value]) => `
+        <div class="p-4 bg-surface-container-low rounded-lg">
+          <dt class="font-label-md text-label-md text-on-surface-variant">${label}</dt>
+          <dd class="font-body-md text-body-md text-on-surface font-bold">${value}</dd>
+        </div>`
+        )
+        .join("");
+    }
+
+    function computeEligibleCategories(d) {
+      const categories = new Set();
+      if (d.age >= 60) categories.add("elderly");
+      if (d.childrenCount > 0) categories.add("child");
+      if (d.hasDisabilityCard === "yes") categories.add("disability");
+      if (d.monthlyIncome <= 15000) categories.add("low-income");
+      if (d.occupation === "farmer") categories.add("farmer");
+      if (d.occupation === "unemployed") categories.add("unemployed");
+      return categories;
+    }
+
+    function renderProgramCard(program) {
+      return `
+      <article class="bg-white border-2 border-outline-variant rounded-lg overflow-hidden flex flex-col h-full">
+        <div class="h-40 overflow-hidden bg-surface-dim">
+          <img class="w-full h-full object-cover" src="${program.image}" alt="${program.title}"/>
+        </div>
+        <div class="p-4 flex flex-col flex-grow">
+          <span class="inline-block px-3 py-1 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full text-[12px] font-bold mb-2 uppercase self-start">${program.agency}</span>
+          <h4 class="font-headline-md text-primary mb-1 text-[18px] leading-tight">${program.title}</h4>
+          <p class="text-on-surface-variant font-body-md text-[16px] mb-2">${program.description}</p>
+          <a href="program-detail.html#${encodeURIComponent(program.id)}" class="mt-auto inline-flex items-center gap-1 text-primary font-bold hover:underline">
+            <span class="material-symbols-outlined text-[18px]">info</span>ดูรายละเอียด
+          </a>
+        </div>
+      </article>`;
+    }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const errors = validateStep(currentStep);
+      if (errors.length > 0) {
+        errorList.innerHTML = errors.map((err) => `<li>${err}</li>`).join("");
+        errorBox.classList.remove("hidden");
+        errorBox.scrollIntoView({ behavior: "smooth", block: "center" });
+        return;
+      }
+      if (currentStep < TOTAL_STEPS) {
+        currentStep += 1;
+        showStep(currentStep);
+      } else {
+        const data = collectData();
+        const categories = computeEligibleCategories(data);
+        const matched = WELFARE_PROGRAMS.filter((p) => categories.has(p.category));
+        document.getElementById(
+          "resultSummary"
+        ).textContent = `จากข้อมูลที่ท่านให้ไว้ ท่านอาจมีสิทธิ์ในสวัสดิการต่อไปนี้ ${matched.length} รายการ`;
+        document.getElementById("resultPrograms").innerHTML = matched.map(renderProgramCard).join("");
+        form.classList.add("hidden");
+        document.getElementById("progressIndicator").classList.add("hidden");
+        resultSection.classList.remove("hidden");
+        resultSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+
+    backBtn.addEventListener("click", () => {
+      if (currentStep > 1) {
+        currentStep -= 1;
+        showStep(currentStep);
+      }
+    });
+
+    document.getElementById("restartBtn").addEventListener("click", () => {
+      form.reset();
+      currentStep = 1;
+      form.classList.remove("hidden");
+      document.getElementById("progressIndicator").classList.remove("hidden");
+      resultSection.classList.add("hidden");
+      showStep(currentStep);
+    });
+
+    document.querySelectorAll("input, select").forEach((el) => {
+      el.addEventListener("change", () => errorBox.classList.add("hidden"));
+    });
+
+    showStep(currentStep);
+  </script>
+<script src="assets/main.js"></script>
+</body>
+</html>

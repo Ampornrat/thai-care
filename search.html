@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html class="light" lang="th">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ค้นหาสวัสดิการ - ไทย Care</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="assets/tailwind-config.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&family=Atkinson+Hyperlegible+Next:wght@400;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@100..900&family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet"/>
+<link href="assets/style.css" rel="stylesheet"/>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container selection:text-on-secondary-fixed">
+<a class="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:bg-primary focus:text-on-primary focus:px-4 focus:py-2" href="#main-content">
+    ข้ามไปที่เนื้อหาหลัก
+</a>
+<header class="bg-surface dark:bg-surface-container border-b-2 border-outline-variant dark:border-outline sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto h-20">
+<a class="flex items-center gap-4 focus-ring rounded" href="index.html">
+<div class="w-10 h-10 bg-primary flex items-center justify-center rounded">
+<span class="material-symbols-outlined text-on-primary" style="font-variation-settings: 'FILL' 1;">diversity_1</span>
+</div>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary leading-none">ไทย Care</h1>
+</a>
+<nav aria-label="เมนูหลัก" class="hidden lg:flex items-center gap-6">
+<a class="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="index.html">หน้าหลัก</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="search.html">ค้นหาสวัสดิการ</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="eligibility.html">ตรวจสอบสิทธิ์</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="locations.html">จุดบริการ</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="contact.html">ติดต่อเรา</a>
+</nav>
+<div class="flex items-center gap-2">
+<button aria-label="สลับความต่างสี" class="p-2 hover:bg-surface-container-high rounded-full focus-ring transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="contrast">contrast</span>
+</button>
+<button aria-label="ปรับขนาดตัวอักษร" class="p-2 hover:bg-surface-container-high rounded-full focus-ring transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="format_size">format_size</span>
+</button>
+<div class="hidden md:flex flex-col items-end ml-4 border-l-2 border-outline-variant pl-4">
+<span class="text-[12px] font-bold text-on-surface-variant uppercase">สายด่วนรัฐบาล</span>
+<span class="font-hotline-display text-hotline-display text-primary leading-none">1111</span>
+</div>
+<button aria-expanded="false" aria-label="เปิดเมนู" class="lg:hidden p-2 hover:bg-surface-container-high rounded-full focus-ring transition-colors" id="mobileMenuBtn">
+<span class="material-symbols-outlined text-primary">menu</span>
+</button>
+</div>
+</div>
+<nav aria-label="เมนูมือถือ" class="mobile-menu lg:hidden border-t border-outline-variant bg-surface" id="mobileMenu">
+<div class="flex flex-col px-margin-mobile py-2">
+<a class="font-label-md text-label-md text-on-surface-variant" href="index.html">หน้าหลัก</a>
+<a class="font-label-md text-label-md text-on-surface-variant" href="search.html">ค้นหาสวัสดิการ</a>
+<a class="font-label-md text-label-md text-on-surface-variant" href="eligibility.html">ตรวจสอบสิทธิ์</a>
+<a class="font-label-md text-label-md text-on-surface-variant" href="locations.html">จุดบริการ</a>
+<a class="font-label-md text-label-md text-on-surface-variant" href="contact.html">ติดต่อเรา</a>
+</div>
+</nav>
+</header>
+<nav aria-label="breadcrumb" class="max-w-7xl mx-auto w-full px-margin-mobile md:px-margin-desktop py-4 flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
+<a class="hover:underline" href="index.html">หน้าหลัก</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-primary font-bold">ค้นหาสวัสดิการ</span>
+</nav>
+<main id="main-content">
+<section class="pb-stack-lg">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-stack-md">
+<h2 class="font-headline-md text-headline-md text-primary mb-2">ค้นหาสวัสดิการที่เหมาะสมกับคุณ</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">เลือกกลุ่มเป้าหมายหรือค้นหาด้วยคำสำคัญเพื่อดูสวัสดิการที่ตรงกับความต้องการของคุณ</p>
+</div>
+<!-- Filter Card -->
+<div class="bg-white border-2 border-outline-variant rounded-lg p-6 mb-stack-md space-y-6">
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant mb-3 block">เลือกกลุ่มเป้าหมาย</span>
+<div class="grid grid-cols-3 md:grid-cols-6 gap-4" id="categoryGrid"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-[1fr_220px_auto] gap-4 items-end pt-2 border-t border-outline-variant">
+<label class="block pt-4 md:pt-0">
+<span class="font-label-md text-label-md text-on-surface-variant mb-1 block">ค้นหาด้วยคำสำคัญ</span>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full h-touch-target pl-11 pr-4 border-2 border-outline-variant rounded focus-ring focus:border-primary outline-none font-body-md text-body-md" id="searchInput" placeholder="เช่น เงินอุดหนุน, ประกันสังคม..." type="text"/>
+</div>
+</label>
+<label class="block">
+<span class="font-label-md text-label-md text-on-surface-variant mb-1 block">เรียงตาม</span>
+<select class="w-full h-touch-target px-4 border-2 border-outline-variant rounded focus-ring focus:border-primary outline-none font-body-md text-body-md" id="sortSelect">
+<option value="popularity">ความนิยม</option>
+<option value="name">ชื่อ (ก-ฮ)</option>
+<option value="status">เปิดรับสมัครก่อน</option>
+</select>
+</label>
+<button class="h-touch-target px-6 flex items-center justify-center gap-2 bg-primary text-on-primary font-bold rounded hover:bg-primary-container transition-colors focus-ring" id="searchBtn" type="button">
+<span class="material-symbols-outlined">search</span>ค้นหาสวัสดิการ
+</button>
+</div>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant mb-4" id="resultCount"></p>
+<!-- Results Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-stack-md" id="resultsGrid"></div>
+<!-- Empty State -->
+<div class="hidden text-center py-16 bg-white border-2 border-dashed border-outline-variant rounded-lg mb-stack-md" id="emptyState">
+<span class="material-symbols-outlined text-[48px] text-on-surface-variant mb-2">search_off</span>
+<p class="font-body-lg text-body-lg text-on-surface-variant">ไม่พบสวัสดิการที่ตรงกับการค้นหา</p>
+<p class="font-body-md text-body-md text-on-surface-variant">ลองเปลี่ยนคำค้นหาหรือกลุ่มเป้าหมายดูอีกครั้ง</p>
+</div>
+<!-- Pagination -->
+<div class="flex items-center justify-center gap-2" id="pagination"></div>
+</div>
+</section>
+</main>
+<footer class="bg-tertiary dark:bg-tertiary-container text-on-tertiary dark:text-on-tertiary-container border-t-4 border-secondary">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop py-stack-lg w-full max-w-7xl mx-auto">
+<div class="md:col-span-5 space-y-4">
+<div class="font-headline-md text-headline-md font-bold text-on-tertiary">ไทย Care</div>
+<p class="font-body-md text-body-md text-tertiary-fixed-dim max-w-sm">
+                    ศูนย์รวมข้อมูลและบริการสวัสดิการภาครัฐ เพื่อความเท่าเทียมและคุณภาพชีวิตที่ดีของคนไทย
+                </p>
+<div class="flex items-start gap-3 text-tertiary-fixed-dim">
+<span class="material-symbols-outlined mt-1">location_on</span>
+<address class="not-italic font-body-md text-body-md">
+                        เลขที่ 1 ถนนพิษณุโลก แขวงดุสิต เขตดุสิต กรุงเทพมหานคร 10300
+                    </address>
+</div>
+</div>
+<div class="md:col-span-4 space-y-4">
+<h4 class="font-label-md text-label-md text-secondary-container uppercase tracking-wider">ช่องทางการติดต่อ</h4>
+<ul class="space-y-3 font-body-md text-body-md">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined">call</span>
+<span class="font-hotline-display">สายด่วน 1111</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined">mail</span>
+<a class="hover:underline hover:text-white transition-colors" href="mailto:contact@thaicare.go.th">contact@thaicare.go.th</a>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined">chat</span>
+<a class="hover:underline hover:text-white transition-colors" href="contact.html">Line Official: @ThaiCareGov</a>
+</li>
+</ul>
+</div>
+<div class="md:col-span-3 space-y-4">
+<h4 class="font-label-md text-label-md text-secondary-container uppercase tracking-wider">ข้อมูลเพิ่มเติม</h4>
+<ul class="space-y-2 font-label-md text-label-md flex flex-col">
+<li><a class="text-tertiary-fixed-dim hover:text-white hover:underline transition-all" href="search.html">ค้นหาสวัสดิการ</a></li>
+<li><a class="text-tertiary-fixed-dim hover:text-white hover:underline transition-all" href="locations.html">จุดบริการทั่วประเทศ</a></li>
+<li><a class="text-tertiary-fixed-dim hover:text-white hover:underline transition-all" href="contact.html">ติดต่อเรา</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/10 py-6">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop text-center text-tertiary-fixed-dim font-label-md text-label-md">
+                © 2024 ไทย Care - พัฒนาเพื่อประชาชนโดยรัฐบาลไทย
+            </div>
+</div>
+</footer>
+<script src="assets/data.js"></script>
+<script>
+    const categoryGrid = document.getElementById("categoryGrid");
+    const searchInput = document.getElementById("searchInput");
+    const sortSelect = document.getElementById("sortSelect");
+    const searchBtn = document.getElementById("searchBtn");
+    const resultsGrid = document.getElementById("resultsGrid");
+    const emptyState = document.getElementById("emptyState");
+    const resultCount = document.getElementById("resultCount");
+    const pagination = document.getElementById("pagination");
+
+    const PAGE_SIZE = 6;
+    let activeCategory = "";
+    let currentPage = 1;
+
+    categoryGrid.innerHTML = WELFARE_CATEGORIES.map(
+      (c) => `
+      <button class="category-chip flex flex-col items-center justify-center gap-2 p-4 rounded-lg border-2 border-outline-variant hover:border-primary transition-colors focus-ring" data-category="${c.value}" type="button">
+        <span class="material-symbols-outlined text-primary text-[28px]">${c.icon}</span>
+        <span class="font-label-md text-[13px] text-on-surface text-center leading-tight">${c.label}</span>
+      </button>`
+    ).join("");
+
+    function updateCategoryStyles() {
+      categoryGrid.querySelectorAll(".category-chip").forEach((btn) => {
+        const isActive = btn.dataset.category === activeCategory;
+        btn.classList.toggle("border-primary", isActive);
+        btn.classList.toggle("bg-primary-fixed", isActive);
+        btn.classList.toggle("border-outline-variant", !isActive);
+      });
+    }
+
+    categoryGrid.addEventListener("click", (e) => {
+      const btn = e.target.closest(".category-chip");
+      if (!btn) return;
+      activeCategory = activeCategory === btn.dataset.category ? "" : btn.dataset.category;
+      currentPage = 1;
+      updateCategoryStyles();
+      applyFilters();
+    });
+
+    function renderStatusBadge(program) {
+      const meta = WELFARE_STATUS[program.status];
+      const classes =
+        program.status === "closed"
+          ? "bg-surface-container-high text-on-surface-variant"
+          : "bg-secondary-fixed text-on-secondary-fixed-variant";
+      return `<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-[12px] font-bold ${classes}">
+        <span class="material-symbols-outlined text-[14px]">${meta.icon}</span>${meta.label}
+      </span>`;
+    }
+
+    function renderProgram(program) {
+      const isClosed = program.status === "closed";
+      return `
+      <article class="bg-white border-2 border-outline-variant rounded-lg overflow-hidden flex flex-col h-full hover:border-secondary transition-colors ${isClosed ? "opacity-70" : ""}">
+        <div class="h-48 overflow-hidden bg-surface-dim">
+          <img class="w-full h-full object-cover" src="${program.image}" alt="${program.title}"/>
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <div class="mb-3">${renderStatusBadge(program)}</div>
+          <p class="font-label-md text-[13px] text-on-surface-variant mb-1 flex items-center gap-1">
+            <span class="material-symbols-outlined text-[16px]">account_balance</span>${program.agency}
+          </p>
+          <h4 class="font-headline-md text-primary mb-2 text-[20px] leading-tight">${program.title}</h4>
+          <p class="text-on-surface-variant font-body-md text-body-md mb-6 line-clamp-3">${program.description}</p>
+          <div class="mt-auto flex gap-2">
+            <a href="program-detail.html#${encodeURIComponent(program.id)}" class="flex-1 border-2 border-primary text-primary py-3 rounded font-bold flex items-center justify-center gap-2 hover:bg-primary-fixed transition-colors focus-ring">
+              <span class="material-symbols-outlined text-[20px]">info</span>ดูรายละเอียด
+            </a>
+            ${
+              isClosed
+                ? `<span class="flex-1 bg-surface-container-high text-on-surface-variant py-3 rounded font-bold flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined text-[20px]">block</span>ปิดรับสมัคร
+                  </span>`
+                : `<a href="eligibility.html?program=${encodeURIComponent(program.id)}" class="flex-1 bg-primary text-on-primary py-3 rounded font-bold flex items-center justify-center gap-2 hover:bg-primary-container transition-colors focus-ring">
+                    <span class="material-symbols-outlined text-[20px]">fact_check</span>ตรวจสอบสิทธิ์
+                  </a>`
+            }
+          </div>
+        </div>
+      </article>`;
+    }
+
+    function getFilteredSorted() {
+      const query = searchInput.value.trim().toLowerCase();
+      let filtered = WELFARE_PROGRAMS.filter((program) => {
+        const matchesQuery =
+          !query ||
+          program.title.toLowerCase().includes(query) ||
+          program.agency.toLowerCase().includes(query) ||
+          program.description.toLowerCase().includes(query);
+        const matchesCategory = !activeCategory || program.category === activeCategory;
+        return matchesQuery && matchesCategory;
+      });
+
+      const sort = sortSelect.value;
+      if (sort === "name") {
+        filtered = [...filtered].sort((a, b) => a.title.localeCompare(b.title, "th"));
+      } else if (sort === "status") {
+        const weight = { open: 0, ongoing: 1, closed: 2 };
+        filtered = [...filtered].sort((a, b) => weight[a.status] - weight[b.status]);
+      }
+      return filtered;
+    }
+
+    function renderPagination(totalItems) {
+      const totalPages = Math.max(1, Math.ceil(totalItems / PAGE_SIZE));
+      if (totalPages <= 1) {
+        pagination.innerHTML = "";
+        return;
+      }
+      let html = `<button class="w-10 h-10 flex items-center justify-center rounded border-2 border-outline-variant hover:border-primary disabled:opacity-40 disabled:cursor-not-allowed focus-ring" data-page="${currentPage - 1}" ${currentPage === 1 ? "disabled" : ""}>
+        <span class="material-symbols-outlined">chevron_left</span>
+      </button>`;
+      for (let i = 1; i <= totalPages; i++) {
+        const isActive = i === currentPage;
+        html += `<button class="w-10 h-10 flex items-center justify-center rounded border-2 font-bold focus-ring ${
+          isActive ? "bg-primary text-on-primary border-primary" : "border-outline-variant hover:border-primary text-on-surface"
+        }" data-page="${i}">${i}</button>`;
+      }
+      html += `<button class="w-10 h-10 flex items-center justify-center rounded border-2 border-outline-variant hover:border-primary disabled:opacity-40 disabled:cursor-not-allowed focus-ring" data-page="${currentPage + 1}" ${currentPage === totalPages ? "disabled" : ""}>
+        <span class="material-symbols-outlined">chevron_right</span>
+      </button>`;
+      pagination.innerHTML = html;
+    }
+
+    pagination.addEventListener("click", (e) => {
+      const btn = e.target.closest("button[data-page]");
+      if (!btn || btn.disabled) return;
+      currentPage = Number(btn.dataset.page);
+      applyFilters(false);
+      window.scrollTo({ top: resultsGrid.offsetTop - 100, behavior: "smooth" });
+    });
+
+    function applyFilters(resetPage = true) {
+      if (resetPage) currentPage = 1;
+      const filtered = getFilteredSorted();
+      const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+      currentPage = Math.min(currentPage, totalPages);
+      const pageItems = filtered.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
+
+      resultsGrid.innerHTML = pageItems.map(renderProgram).join("");
+      emptyState.classList.toggle("hidden", filtered.length > 0);
+      resultsGrid.classList.toggle("hidden", filtered.length === 0);
+      resultCount.textContent = `พบ ${filtered.length} รายการ`;
+      renderPagination(filtered.length);
+    }
+
+    // Pre-fill search from ?q= query param (e.g. linked from the homepage)
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("q")) searchInput.value = params.get("q");
+
+    searchInput.addEventListener("input", () => applyFilters());
+    sortSelect.addEventListener("change", () => applyFilters());
+    searchBtn.addEventListener("click", () => applyFilters());
+
+    updateCategoryStyles();
+    applyFilters();
+  </script>
+<script src="assets/main.js"></script>
+</body>
+</html>

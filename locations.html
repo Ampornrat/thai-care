@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="light" lang="th">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>จุดบริการ - ไทย Care</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="assets/tailwind-config.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&family=Atkinson+Hyperlegible+Next:wght@400;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@100..900&family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet"/>
+<link href="assets/style.css" rel="stylesheet"/>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container selection:text-on-secondary-fixed">
+<a class="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:bg-primary focus:text-on-primary focus:px-4 focus:py-2" href="#main-content">
+    ข้ามไปที่เนื้อหาหลัก
+</a>
+<header class="bg-surface dark:bg-surface-container border-b-2 border-outline-variant dark:border-outline sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto h-20">
+<a class="flex items-center gap-4 focus-ring rounded" href="index.html">
+<div class="w-10 h-10 bg-primary flex items-center justify-center rounded">
+<span class="material-symbols-outlined text-on-primary" style="font-variation-settings: 'FILL' 1;">diversity_1</span>
+</div>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary leading-none">ไทย Care</h1>
+</a>
+<nav aria-label="เมนูหลัก" class="hidden lg:flex items-center gap-6">
+<a class="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="index.html">หน้าหลัก</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="search.html">ค้นหาสวัสดิการ</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="eligibility.html">ตรวจสอบสิทธิ์</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="locations.html">จุดบริการ</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="contact.html">ติดต่อเรา</a>
+</nav>
+<div class="flex items-center gap-2">
+<button aria-label="สลับความต่างสี" class="p-2 hover:bg-surface-container-high rounded-full focus-ring transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="contrast">contrast</span>
+</button>
+<button aria-label="ปรับขนาดตัวอักษร" class="p-2 hover:bg-surface-container-high rounded-full focus-ring transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="format_size">format_size</span>
+</button>
+<div class="hidden md:flex flex-col items-end ml-4 border-l-2 border-outline-variant pl-4">
+<span class="text-[12px] font-bold text-on-surface-variant uppercase">สายด่วนรัฐบาล</span>
+<span class="font-hotline-display text-hotline-display text-primary leading-none">1111</span>
+</div>
+<button aria-expanded="false" aria-label="เปิดเมนู" class="lg:hidden p-2 hover:bg-surface-container-high rounded-full focus-ring transition-colors" id="mobileMenuBtn">
+<span class="material-symbols-outlined text-primary">menu</span>
+</button>
+</div>
+</div>
+<nav aria-label="เมนูมือถือ" class="mobile-menu lg:hidden border-t border-outline-variant bg-surface" id="mobileMenu">
+<div class="flex flex-col px-margin-mobile py-2">
+<a class="font-label-md text-label-md text-on-surface-variant" href="index.html">หน้าหลัก</a>
+<a class="font-label-md text-label-md text-on-surface-variant" href="search.html">ค้นหาสวัสดิการ</a>
+<a class="font-label-md text-label-md text-on-surface-variant" href="eligibility.html">ตรวจสอบสิทธิ์</a>
+<a class="font-label-md text-label-md text-on-surface-variant" href="locations.html">จุดบริการ</a>
+<a class="font-label-md text-label-md text-on-surface-variant" href="contact.html">ติดต่อเรา</a>
+</div>
+</nav>
+</header>
+<nav aria-label="breadcrumb" class="max-w-7xl mx-auto w-full px-margin-mobile md:px-margin-desktop py-4 flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
+<a class="hover:underline" href="index.html">หน้าหลัก</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-primary font-bold">จุดบริการใกล้บ้าน</span>
+</nav>
+<main id="main-content">
+<section class="pb-stack-lg">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-stack-md">
+<h2 class="font-headline-md text-headline-md text-primary mb-2">จุดบริการใกล้บ้าน</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">ค้นหาศูนย์บริการสาธารณสุข สำนักงานเขต และจุดลงทะเบียนสวัสดิการภาครัฐที่อยู่ใกล้คุณที่สุด</p>
+</div>
+<!-- Filter Bar -->
+<div class="bg-white border-2 border-outline-variant rounded-lg p-6 mb-stack-md">
+<div class="grid grid-cols-1 md:grid-cols-[1fr_1fr_auto] gap-4 items-end">
+<label class="block">
+<span class="font-label-md text-label-md text-on-surface-variant mb-1 block">จังหวัด</span>
+<select class="w-full h-touch-target px-4 border-2 border-outline-variant rounded focus-ring focus:border-primary outline-none font-body-md text-body-md" id="provinceFilter">
+<option value="">เลือกจังหวัด</option>
+</select>
+</label>
+<label class="block">
+<span class="font-label-md text-label-md text-on-surface-variant mb-1 block">อำเภอ/เขต</span>
+<select class="w-full h-touch-target px-4 border-2 border-outline-variant rounded focus-ring focus:border-primary outline-none font-body-md text-body-md disabled:bg-surface-container-low disabled:text-on-surface-variant" disabled="" id="districtFilter">
+<option value="">โปรดเลือกจังหวัดก่อน</option>
+</select>
+</label>
+<button class="h-touch-target px-6 flex items-center justify-center gap-2 bg-primary text-on-primary font-bold rounded hover:bg-primary-container transition-colors focus-ring" id="searchBtn" type="button">
+<span class="material-symbols-outlined">search</span>ค้นหา
+</button>
+</div>
+</div>
+<!-- Tabs -->
+<div class="flex items-center gap-6 border-b-2 border-outline-variant mb-stack-md" role="tablist">
+<button aria-selected="true" class="location-tab pb-3 font-label-md text-label-md font-bold text-primary border-b-2 border-primary -mb-0.5" data-tab="list" role="tab" type="button">รายการ (List)</button>
+<button aria-selected="false" class="location-tab pb-3 font-label-md text-label-md font-bold text-on-surface-variant border-b-2 border-transparent -mb-0.5" data-tab="map" role="tab" type="button">แผนที่ (Map)</button>
+</div>
+<!-- Empty state -->
+<div class="text-center py-20 bg-white border-2 border-dashed border-outline-variant rounded-lg" id="emptyState">
+<div class="w-16 h-16 mx-auto mb-4 rounded-lg bg-surface-container-low flex items-center justify-center">
+<span class="material-symbols-outlined text-[32px] text-on-surface-variant">location_on</span>
+</div>
+<p class="font-headline-md text-[20px] text-primary font-bold mb-2">ระบุตำแหน่งที่ต้องการค้นหา</p>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mx-auto">กรุณาเลือกจังหวัดและอำเภอที่ท่านต้องการเพื่อแสดงรายการจุดบริการในพื้นที่ของท่าน</p>
+</div>
+<!-- No results state -->
+<div class="hidden text-center py-20 bg-white border-2 border-dashed border-outline-variant rounded-lg" id="noResultsState">
+<span class="material-symbols-outlined text-[48px] text-on-surface-variant mb-2">search_off</span>
+<p class="font-body-lg text-body-lg text-on-surface-variant">ไม่พบจุดบริการในพื้นที่ที่เลือก</p>
+</div>
+<!-- List panel -->
+<div class="hidden grid grid-cols-1 md:grid-cols-2 gap-gutter" id="listPanel"></div>
+<!-- Map panel -->
+<div class="hidden space-y-4" id="mapPanel"></div>
+</div>
+</section>
+</main>
+<footer class="bg-tertiary dark:bg-tertiary-container text-on-tertiary dark:text-on-tertiary-container border-t-4 border-secondary">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop py-stack-lg w-full max-w-7xl mx-auto">
+<div class="md:col-span-5 space-y-4">
+<div class="font-headline-md text-headline-md font-bold text-on-tertiary">ไทย Care</div>
+<p class="font-body-md text-body-md text-tertiary-fixed-dim max-w-sm">
+                    ศูนย์รวมข้อมูลและบริการสวัสดิการภาครัฐ เพื่อความเท่าเทียมและคุณภาพชีวิตที่ดีของคนไทย
+                </p>
+<div class="flex items-start gap-3 text-tertiary-fixed-dim">
+<span class="material-symbols-outlined mt-1">location_on</span>
+<address class="not-italic font-body-md text-body-md">
+                        เลขที่ 1 ถนนพิษณุโลก แขวงดุสิต เขตดุสิต กรุงเทพมหานคร 10300
+                    </address>
+</div>
+</div>
+<div class="md:col-span-4 space-y-4">
+<h4 class="font-label-md text-label-md text-secondary-container uppercase tracking-wider">ช่องทางการติดต่อ</h4>
+<ul class="space-y-3 font-body-md text-body-md">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined">call</span>
+<span class="font-hotline-display">สายด่วน 1111</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined">mail</span>
+<a class="hover:underline hover:text-white transition-colors" href="mailto:contact@thaicare.go.th">contact@thaicare.go.th</a>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined">chat</span>
+<a class="hover:underline hover:text-white transition-colors" href="contact.html">Line Official: @ThaiCareGov</a>
+</li>
+</ul>
+</div>
+<div class="md:col-span-3 space-y-4">
+<h4 class="font-label-md text-label-md text-secondary-container uppercase tracking-wider">ข้อมูลเพิ่มเติม</h4>
+<ul class="space-y-2 font-label-md text-label-md flex flex-col">
+<li><a class="text-tertiary-fixed-dim hover:text-white hover:underline transition-all" href="search.html">ค้นหาสวัสดิการ</a></li>
+<li><a class="text-tertiary-fixed-dim hover:text-white hover:underline transition-all" href="locations.html">จุดบริการทั่วประเทศ</a></li>
+<li><a class="text-tertiary-fixed-dim hover:text-white hover:underline transition-all" href="contact.html">ติดต่อเรา</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/10 py-6">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop text-center text-tertiary-fixed-dim font-label-md text-label-md">
+                © 2024 ไทย Care - พัฒนาเพื่อประชาชนโดยรัฐบาลไทย
+            </div>
+</div>
+</footer>
+<script src="assets/data.js"></script>
+<script>
+    const provinceFilter = document.getElementById("provinceFilter");
+    const districtFilter = document.getElementById("districtFilter");
+    const searchBtn = document.getElementById("searchBtn");
+    const emptyState = document.getElementById("emptyState");
+    const noResultsState = document.getElementById("noResultsState");
+    const listPanel = document.getElementById("listPanel");
+    const mapPanel = document.getElementById("mapPanel");
+    const tabs = document.querySelectorAll(".location-tab");
+
+    const provinces = [...new Set(SERVICE_POINTS.map((p) => p.province))].sort();
+    provinceFilter.innerHTML += provinces.map((p) => `<option value="${p}">${p}</option>`).join("");
+
+    let activeTab = "list";
+    let currentResults = null; // null = no search performed yet
+
+    provinceFilter.addEventListener("change", () => {
+      const province = provinceFilter.value;
+      if (!province) {
+        districtFilter.innerHTML = `<option value="">โปรดเลือกจังหวัดก่อน</option>`;
+        districtFilter.disabled = true;
+        return;
+      }
+      const districts = [...new Set(SERVICE_POINTS.filter((p) => p.province === province).map((p) => p.district))].sort();
+      districtFilter.innerHTML =
+        `<option value="">เลือกอำเภอ/เขต</option>` + districts.map((d) => `<option value="${d}">${d}</option>`).join("");
+      districtFilter.disabled = false;
+    });
+
+    function renderListCard(point) {
+      const mapsUrl = `https://www.google.com/maps/search/${encodeURIComponent(point.name + " " + point.address)}`;
+      return `
+      <article class="bg-white border-2 border-outline-variant rounded-lg p-6 flex flex-col gap-3 hover:border-secondary transition-colors">
+        <div class="flex items-start gap-3">
+          <span class="material-symbols-outlined text-primary text-[28px] shrink-0" style="font-variation-settings: 'FILL' 1;">location_on</span>
+          <div>
+            <span class="inline-block px-3 py-1 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full text-[12px] font-bold mb-2 uppercase">${point.province}</span>
+            <h3 class="font-headline-md text-primary text-[18px] leading-tight">${point.name}</h3>
+          </div>
+        </div>
+        <address class="not-italic font-body-md text-body-md text-on-surface-variant">${point.address}</address>
+        <div class="flex flex-wrap gap-x-6 gap-y-1 font-body-md text-body-md text-on-surface-variant">
+          <span class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">call</span>${point.phone}</span>
+          <span class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">schedule</span>${point.hours}</span>
+        </div>
+        <div class="mt-auto flex gap-3 pt-2">
+          <a class="flex-1 text-center py-3 rounded font-bold border-2 border-primary text-primary hover:bg-primary-fixed transition-colors focus-ring flex items-center justify-center gap-2" href="tel:${point.phone.replace(/[^0-9]/g, "")}">
+            <span class="material-symbols-outlined text-[20px]">call</span>โทร
+          </a>
+          <a class="flex-1 text-center py-3 rounded font-bold bg-primary text-on-primary hover:bg-primary-container transition-colors focus-ring flex items-center justify-center gap-2" href="${mapsUrl}" target="_blank" rel="noopener">
+            <span class="material-symbols-outlined text-[20px]">directions</span>เส้นทาง
+          </a>
+        </div>
+      </article>`;
+    }
+
+    function renderMapCard(point) {
+      const embedSrc = `https://www.google.com/maps?q=${encodeURIComponent(point.name + " " + point.address)}&output=embed`;
+      return `
+      <div class="bg-white border-2 border-outline-variant rounded-lg overflow-hidden">
+        <div class="p-4 border-b-2 border-outline-variant">
+          <h3 class="font-headline-md text-primary text-[16px]">${point.name}</h3>
+          <p class="font-label-md text-label-md text-on-surface-variant">${point.address}</p>
+        </div>
+        <iframe class="w-full h-72 border-0" src="${embedSrc}" loading="lazy" title="แผนที่ ${point.name}"></iframe>
+      </div>`;
+    }
+
+    function renderPanels() {
+      if (currentResults === null) {
+        emptyState.classList.remove("hidden");
+        noResultsState.classList.add("hidden");
+        listPanel.classList.add("hidden");
+        mapPanel.classList.add("hidden");
+        return;
+      }
+      emptyState.classList.add("hidden");
+      if (currentResults.length === 0) {
+        noResultsState.classList.remove("hidden");
+        listPanel.classList.add("hidden");
+        mapPanel.classList.add("hidden");
+        return;
+      }
+      noResultsState.classList.add("hidden");
+      listPanel.classList.toggle("hidden", activeTab !== "list");
+      mapPanel.classList.toggle("hidden", activeTab !== "map");
+      listPanel.innerHTML = currentResults.map(renderListCard).join("");
+      mapPanel.innerHTML = currentResults.map(renderMapCard).join("");
+    }
+
+    searchBtn.addEventListener("click", () => {
+      const province = provinceFilter.value;
+      const district = districtFilter.value;
+      if (!province || !district) {
+        currentResults = null;
+        renderPanels();
+        return;
+      }
+      currentResults = SERVICE_POINTS.filter((p) => p.province === province && p.district === district);
+      renderPanels();
+    });
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        activeTab = tab.dataset.tab;
+        tabs.forEach((t) => {
+          const isActive = t === tab;
+          t.setAttribute("aria-selected", String(isActive));
+          t.classList.toggle("text-primary", isActive);
+          t.classList.toggle("border-primary", isActive);
+          t.classList.toggle("text-on-surface-variant", !isActive);
+          t.classList.toggle("border-transparent", !isActive);
+        });
+        renderPanels();
+      });
+    });
+
+    renderPanels();
+  </script>
+<script src="assets/main.js"></script>
+</body>
+</html>

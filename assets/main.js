@@ -38,10 +38,10 @@
   const fontBtn = document.querySelector('[data-icon="format_size"]')?.parentElement;
   if (fontBtn) {
     const savedLargeText = localStorage.getItem("thaicare-large-text") === "on";
-    if (savedLargeText) document.body.classList.add("a11y-large-text");
+    if (savedLargeText) document.documentElement.classList.add("a11y-large-text");
     fontBtn.setAttribute("aria-pressed", String(savedLargeText));
     fontBtn.addEventListener("click", () => {
-      const isLarge = document.body.classList.toggle("a11y-large-text");
+      const isLarge = document.documentElement.classList.toggle("a11y-large-text");
       fontBtn.setAttribute("aria-pressed", String(isLarge));
       localStorage.setItem("thaicare-large-text", isLarge ? "on" : "off");
     });

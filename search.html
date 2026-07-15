@@ -6,8 +6,7 @@
 <title>ค้นหาสวัสดิการ - ไทย Care</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script src="assets/tailwind-config.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&family=Atkinson+Hyperlegible+Next:wght@400;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@100..900&family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <link href="assets/style.css" rel="stylesheet"/>
 </head>
 <body class="bg-background text-on-background font-body-md selection:bg-secondary-container selection:text-on-secondary-fixed">
@@ -37,7 +36,7 @@
 <span class="material-symbols-outlined text-primary" data-icon="format_size" aria-hidden="true">format_size</span>
 </button>
 <div class="hidden md:flex flex-col items-end ml-4 border-l-2 border-outline-variant pl-4" aria-hidden="true">
-<span class="text-[12px] font-bold text-on-surface-variant uppercase">สายด่วนรัฐบาล</span>
+<span class="text-[0.75rem] font-bold text-on-surface-variant uppercase">สายด่วนรัฐบาล</span>
 <span class="font-hotline-display text-hotline-display text-primary leading-none">1111</span>
 </div>
 <button aria-expanded="false" aria-label="เปิดเมนู" aria-controls="mobileMenu" class="lg:hidden p-2 hover:bg-surface-container-high rounded-full focus-ring transition-colors" id="mobileMenuBtn">
@@ -57,7 +56,7 @@
 </header>
 <nav aria-label="breadcrumb" class="max-w-7xl mx-auto w-full px-margin-mobile md:px-margin-desktop py-4 flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
 <a class="hover:underline" href="index.html">หน้าหลัก</a>
-<span class="material-symbols-outlined text-[16px]" aria-hidden="true">chevron_right</span>
+<span class="material-symbols-outlined text-[1rem]" aria-hidden="true">chevron_right</span>
 <span class="text-primary font-bold" aria-current="page">ค้นหาสวัสดิการ</span>
 </nav>
 <main id="main-content">
@@ -99,7 +98,7 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-stack-md" id="resultsGrid"></div>
 <!-- Empty State -->
 <div class="hidden text-center py-16 bg-white border-2 border-dashed border-outline-variant rounded-lg mb-stack-md" id="emptyState">
-<span class="material-symbols-outlined text-[48px] text-on-surface-variant mb-2">search_off</span>
+<span class="material-symbols-outlined text-[3rem] text-on-surface-variant mb-2">search_off</span>
 <p class="font-body-lg text-body-lg text-on-surface-variant">ไม่พบสวัสดิการที่ตรงกับการค้นหา</p>
 <p class="font-body-md text-body-md text-on-surface-variant">ลองเปลี่ยนคำค้นหาหรือกลุ่มเป้าหมายดูอีกครั้ง</p>
 </div>
@@ -172,8 +171,8 @@
     categoryGrid.innerHTML = WELFARE_CATEGORIES.map(
       (c) => `
       <button class="category-chip flex flex-col items-center justify-center gap-2 p-4 rounded-lg border-2 border-outline-variant hover:border-primary transition-colors focus-ring" data-category="${c.value}" type="button">
-        <span class="material-symbols-outlined text-primary text-[28px]">${c.icon}</span>
-        <span class="font-label-md text-[13px] text-on-surface text-center leading-tight">${c.label}</span>
+        <span class="material-symbols-outlined text-primary text-[1.75rem]">${c.icon}</span>
+        <span class="font-label-md text-[0.8125rem] text-on-surface text-center leading-tight">${c.label}</span>
       </button>`
     ).join("");
 
@@ -201,8 +200,8 @@
         program.status === "closed"
           ? "bg-surface-container-high text-on-surface-variant"
           : "bg-secondary-fixed text-on-secondary-fixed-variant";
-      return `<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-[12px] font-bold ${classes}">
-        <span class="material-symbols-outlined text-[14px]">${meta.icon}</span>${meta.label}
+      return `<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-[0.75rem] font-bold ${classes}">
+        <span class="material-symbols-outlined text-[0.875rem]">${meta.icon}</span>${meta.label}
       </span>`;
     }
 
@@ -215,22 +214,22 @@
         </div>
         <div class="p-6 flex flex-col flex-grow">
           <div class="mb-3">${renderStatusBadge(program)}</div>
-          <p class="font-label-md text-[13px] text-on-surface-variant mb-1 flex items-center gap-1">
-            <span class="material-symbols-outlined text-[16px]" aria-hidden="true">account_balance</span>${program.agency}
+          <p class="font-label-md text-[0.8125rem] text-on-surface-variant mb-1 flex items-center gap-1">
+            <span class="material-symbols-outlined text-[1rem]" aria-hidden="true">account_balance</span>${program.agency}
           </p>
-          <h4 class="font-headline-md text-primary mb-2 text-[20px] leading-tight">${program.title}</h4>
+          <h4 class="font-headline-md text-primary mb-2 text-[1.25rem] leading-tight">${program.title}</h4>
           <p class="text-on-surface-variant font-body-md text-body-md mb-6 line-clamp-3">${program.description}</p>
           <div class="mt-auto flex gap-2">
             <a href="program-detail.html#${encodeURIComponent(program.id)}" aria-label="ดูรายละเอียด: ${program.title}" class="flex-1 border-2 border-primary text-primary py-3 rounded font-bold flex items-center justify-center gap-2 hover:bg-primary-fixed transition-colors focus-ring">
-              <span class="material-symbols-outlined text-[20px]" aria-hidden="true">info</span>ดูรายละเอียด
+              <span class="material-symbols-outlined text-[1.25rem]" aria-hidden="true">info</span>ดูรายละเอียด
             </a>
             ${
               isClosed
                 ? `<span class="flex-1 bg-surface-container-high text-on-surface-variant py-3 rounded font-bold flex items-center justify-center gap-2">
-                    <span class="material-symbols-outlined text-[20px]" aria-hidden="true">block</span>ปิดรับสมัคร
+                    <span class="material-symbols-outlined text-[1.25rem]" aria-hidden="true">block</span>ปิดรับสมัคร
                   </span>`
                 : `<a href="eligibility.html?program=${encodeURIComponent(program.id)}" aria-label="ตรวจสอบสิทธิ์: ${program.title}" class="flex-1 bg-primary text-on-primary py-3 rounded font-bold flex items-center justify-center gap-2 hover:bg-primary-container transition-colors focus-ring">
-                    <span class="material-symbols-outlined text-[20px]" aria-hidden="true">fact_check</span>ตรวจสอบสิทธิ์
+                    <span class="material-symbols-outlined text-[1.25rem]" aria-hidden="true">fact_check</span>ตรวจสอบสิทธิ์
                   </a>`
             }
           </div>

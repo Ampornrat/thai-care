@@ -6,8 +6,7 @@
 <title>ตรวจสอบสิทธิ์ - ไทย Care</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script src="assets/tailwind-config.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&family=Atkinson+Hyperlegible+Next:wght@400;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@100..900&family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <link href="assets/style.css" rel="stylesheet"/>
 </head>
 <body class="bg-background text-on-background font-body-md selection:bg-secondary-container selection:text-on-secondary-fixed">
@@ -37,7 +36,7 @@
 <span class="material-symbols-outlined text-primary" data-icon="format_size" aria-hidden="true">format_size</span>
 </button>
 <div class="hidden md:flex flex-col items-end ml-4 border-l-2 border-outline-variant pl-4" aria-hidden="true">
-<span class="text-[12px] font-bold text-on-surface-variant uppercase">สายด่วนรัฐบาล</span>
+<span class="text-[0.75rem] font-bold text-on-surface-variant uppercase">สายด่วนรัฐบาล</span>
 <span class="font-hotline-display text-hotline-display text-primary leading-none">1111</span>
 </div>
 <button aria-expanded="false" aria-label="เปิดเมนู" aria-controls="mobileMenu" class="lg:hidden p-2 hover:bg-surface-container-high rounded-full focus-ring transition-colors" id="mobileMenuBtn">
@@ -57,7 +56,7 @@
 </header>
 <nav aria-label="breadcrumb" class="max-w-7xl mx-auto w-full px-margin-mobile md:px-margin-desktop py-4 flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
 <a class="hover:underline" href="index.html">หน้าหลัก</a>
-<span class="material-symbols-outlined text-[16px]" aria-hidden="true">chevron_right</span>
+<span class="material-symbols-outlined text-[1rem]" aria-hidden="true">chevron_right</span>
 <span class="text-primary font-bold" aria-current="page">ตรวจสอบสิทธิ์สวัสดิการ</span>
 </nav>
 <main class="w-full max-w-3xl mx-auto px-margin-mobile md:px-margin-desktop pb-stack-lg" id="main-content">
@@ -73,19 +72,19 @@
 <div class="absolute top-1/2 left-0 h-0.5 bg-primary -z-10 -translate-y-1/2 transition-all duration-500" id="progressLine" style="width: 0%"></div>
 <div class="flex flex-col items-center gap-2">
 <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold step-circle" data-step="1">1</div>
-<span class="font-label-md text-[12px] md:text-label-md text-on-surface-variant step-label" data-step="1">ข้อมูลส่วนตัว</span>
+<span class="font-label-md text-[0.75rem] md:text-label-md text-on-surface-variant step-label" data-step="1">ข้อมูลส่วนตัว</span>
 </div>
 <div class="flex flex-col items-center gap-2">
 <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold step-circle" data-step="2">2</div>
-<span class="font-label-md text-[12px] md:text-label-md text-on-surface-variant step-label" data-step="2">สถานะครอบครัว</span>
+<span class="font-label-md text-[0.75rem] md:text-label-md text-on-surface-variant step-label" data-step="2">สถานะครอบครัว</span>
 </div>
 <div class="flex flex-col items-center gap-2">
 <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold step-circle" data-step="3">3</div>
-<span class="font-label-md text-[12px] md:text-label-md text-on-surface-variant step-label" data-step="3">ข้อมูลรายได้</span>
+<span class="font-label-md text-[0.75rem] md:text-label-md text-on-surface-variant step-label" data-step="3">ข้อมูลรายได้</span>
 </div>
 <div class="flex flex-col items-center gap-2">
 <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold step-circle" data-step="4">4</div>
-<span class="font-label-md text-[12px] md:text-label-md text-on-surface-variant step-label" data-step="4">สรุปข้อมูล</span>
+<span class="font-label-md text-[0.75rem] md:text-label-md text-on-surface-variant step-label" data-step="4">สรุปข้อมูล</span>
 </div>
 </div>
 <p class="text-center font-label-md text-label-md text-on-surface-variant" id="progressCaption">ขั้นตอนที่ 1 จาก 4: ข้อมูลส่วนตัว</p>
@@ -103,27 +102,27 @@
 <!-- Step 1: Personal Info -->
 <div class="wizard-step active space-y-8" data-step="1">
 <div class="space-y-2">
-<label class="block font-headline-md text-[20px] text-primary font-bold" for="citizen_id">1. เลขบัตรประชาชน (13 หลัก) <span class="text-error" aria-hidden="true">*</span></label>
+<label class="block font-headline-md text-[1.25rem] text-primary font-bold" for="citizen_id">1. เลขบัตรประชาชน (13 หลัก) <span class="text-error" aria-hidden="true">*</span></label>
 <input aria-required="true" autocomplete="off" class="w-full h-touch-target px-4 border-2 border-outline-variant rounded-lg focus:ring-3 focus:ring-secondary focus:border-secondary outline-none transition-all" id="citizen_id" inputmode="numeric" maxlength="13" placeholder="เช่น 1103700xxxxxx" required type="text"/>
 </div>
 <div class="space-y-2">
-<label class="block font-headline-md text-[20px] text-primary font-bold" for="full_name">2. ชื่อ-นามสกุล <span class="text-error" aria-hidden="true">*</span></label>
+<label class="block font-headline-md text-[1.25rem] text-primary font-bold" for="full_name">2. ชื่อ-นามสกุล <span class="text-error" aria-hidden="true">*</span></label>
 <input aria-required="true" autocomplete="name" class="w-full h-touch-target px-4 border-2 border-outline-variant rounded-lg focus:ring-3 focus:ring-secondary focus:border-secondary outline-none transition-all" id="full_name" placeholder="ชื่อ นามสกุล" required type="text"/>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 <div class="space-y-2">
-<label class="block font-headline-md text-[20px] text-primary font-bold" for="age">3. อายุ (ปี) <span class="text-error" aria-hidden="true">*</span></label>
+<label class="block font-headline-md text-[1.25rem] text-primary font-bold" for="age">3. อายุ (ปี) <span class="text-error" aria-hidden="true">*</span></label>
 <input aria-required="true" autocomplete="off" class="w-full h-touch-target px-4 border-2 border-outline-variant rounded-lg focus:ring-3 focus:ring-secondary focus:border-secondary outline-none transition-all" id="age" max="120" min="0" placeholder="0" required type="number"/>
 </div>
 <div class="space-y-2">
-<label class="block font-headline-md text-[20px] text-primary font-bold" for="province">4. จังหวัดตามทะเบียนบ้าน <span class="text-error" aria-hidden="true">*</span></label>
+<label class="block font-headline-md text-[1.25rem] text-primary font-bold" for="province">4. จังหวัดตามทะเบียนบ้าน <span class="text-error" aria-hidden="true">*</span></label>
 <select aria-required="true" autocomplete="address-level1" class="w-full h-touch-target px-4 border-2 border-outline-variant rounded-lg focus:ring-3 focus:ring-secondary focus:border-secondary outline-none transition-all" id="province" required>
 <option value="">เลือกจังหวัด</option>
 </select>
 </div>
 </div>
 <fieldset class="space-y-4">
-<legend class="font-headline-md text-[20px] text-primary font-bold">5. ท่านมีบัตรประจำตัวคนพิการหรือไม่ <span class="text-error" aria-hidden="true">*</span></legend>
+<legend class="font-headline-md text-[1.25rem] text-primary font-bold">5. ท่านมีบัตรประจำตัวคนพิการหรือไม่ <span class="text-error" aria-hidden="true">*</span></legend>
 <div class="flex flex-col md:flex-row gap-4">
 <label class="flex-1 flex items-center gap-4 p-4 border-2 border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container transition-colors focus-within:ring-3 focus-within:ring-secondary">
 <input class="w-5 h-5 text-secondary border-outline focus:ring-secondary" name="has_disability_card" type="radio" value="yes"/>
@@ -139,7 +138,7 @@
 <!-- Step 2: Family Status -->
 <div class="wizard-step space-y-8" data-step="2">
 <fieldset class="space-y-4">
-<legend class="font-headline-md text-[20px] text-primary font-bold">1. สถานภาพการสมรส <span class="text-error" aria-hidden="true">*</span></legend>
+<legend class="font-headline-md text-[1.25rem] text-primary font-bold">1. สถานภาพการสมรส <span class="text-error" aria-hidden="true">*</span></legend>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 <label class="flex items-center gap-4 p-4 border-2 border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container transition-colors focus-within:ring-3 focus-within:ring-secondary">
 <input class="w-5 h-5 text-secondary border-outline focus:ring-secondary" name="marital_status" type="radio" value="single"/>
@@ -160,7 +159,7 @@
 </div>
 </fieldset>
 <div class="space-y-4">
-<label class="block font-headline-md text-[20px] text-primary font-bold" for="children_count">2. จำนวนบุตร (อายุไม่เกิน 18 ปี) <span class="text-error" aria-hidden="true">*</span></label>
+<label class="block font-headline-md text-[1.25rem] text-primary font-bold" for="children_count">2. จำนวนบุตร (อายุไม่เกิน 18 ปี) <span class="text-error" aria-hidden="true">*</span></label>
 <p class="text-on-surface-variant font-label-md text-label-md" id="children_count_hint">หากไม่มี ให้ระบุเป็น 0</p>
 <div class="relative max-w-[200px]">
 <input aria-describedby="children_count_hint" aria-required="true" class="w-full h-touch-target px-4 border-2 border-outline-variant rounded-lg focus:ring-3 focus:ring-secondary focus:border-secondary outline-none transition-all" id="children_count" max="20" min="0" placeholder="0" required type="number"/>
@@ -168,7 +167,7 @@
 </div>
 </div>
 <fieldset class="space-y-4">
-<legend class="font-headline-md text-[20px] text-primary font-bold">3. การดูแลบุคคลในครอบครัว <span class="text-error" aria-hidden="true">*</span></legend>
+<legend class="font-headline-md text-[1.25rem] text-primary font-bold">3. การดูแลบุคคลในครอบครัว <span class="text-error" aria-hidden="true">*</span></legend>
 <p class="text-on-surface-variant font-label-md text-label-md">ท่านเป็นผู้ดูแลหลักของบุคคลที่อยู่ในภาวะพึ่งพิง (ผู้สูงอายุ 60 ปีขึ้นไป หรือผู้พิการ) ใช่หรือไม่?</p>
 <div class="flex flex-col md:flex-row gap-4">
 <label class="flex-1 flex items-center gap-4 p-4 border-2 border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container transition-colors focus-within:ring-3 focus-within:ring-secondary">
@@ -185,7 +184,7 @@
 <!-- Step 3: Income Info -->
 <div class="wizard-step space-y-8" data-step="3">
 <div class="space-y-2">
-<label class="block font-headline-md text-[20px] text-primary font-bold" for="occupation">1. อาชีพ <span class="text-error" aria-hidden="true">*</span></label>
+<label class="block font-headline-md text-[1.25rem] text-primary font-bold" for="occupation">1. อาชีพ <span class="text-error" aria-hidden="true">*</span></label>
 <select aria-required="true" class="w-full h-touch-target px-4 border-2 border-outline-variant rounded-lg focus:ring-3 focus:ring-secondary focus:border-secondary outline-none transition-all" id="occupation" required>
 <option value="">เลือกอาชีพ</option>
 <option value="government">รับราชการ / รัฐวิสาหกิจ</option>
@@ -197,11 +196,11 @@
 </select>
 </div>
 <div class="space-y-2">
-<label class="block font-headline-md text-[20px] text-primary font-bold" for="monthly_income">2. รายได้เฉลี่ยต่อเดือน (บาท) <span class="text-error" aria-hidden="true">*</span></label>
+<label class="block font-headline-md text-[1.25rem] text-primary font-bold" for="monthly_income">2. รายได้เฉลี่ยต่อเดือน (บาท) <span class="text-error" aria-hidden="true">*</span></label>
 <input aria-required="true" class="w-full h-touch-target px-4 border-2 border-outline-variant rounded-lg focus:ring-3 focus:ring-secondary focus:border-secondary outline-none transition-all" id="monthly_income" min="0" placeholder="0" required type="number"/>
 </div>
 <fieldset class="space-y-4">
-<legend class="font-headline-md text-[20px] text-primary font-bold">3. ท่านหรือคู่สมรสเป็นเจ้าของกรรมสิทธิ์ที่ดิน/อสังหาริมทรัพย์หรือไม่ <span class="text-error" aria-hidden="true">*</span></legend>
+<legend class="font-headline-md text-[1.25rem] text-primary font-bold">3. ท่านหรือคู่สมรสเป็นเจ้าของกรรมสิทธิ์ที่ดิน/อสังหาริมทรัพย์หรือไม่ <span class="text-error" aria-hidden="true">*</span></legend>
 <div class="flex flex-col md:flex-row gap-4">
 <label class="flex-1 flex items-center gap-4 p-4 border-2 border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container transition-colors focus-within:ring-3 focus-within:ring-secondary">
 <input class="w-5 h-5 text-secondary border-outline focus:ring-secondary" name="owns_property" type="radio" value="yes"/>
@@ -216,11 +215,11 @@
 </div>
 <!-- Step 4: Summary -->
 <div class="wizard-step space-y-6" data-step="4">
-<h3 class="font-headline-md text-[20px] text-primary font-bold">สรุปข้อมูลที่กรอก</h3>
+<h3 class="font-headline-md text-[1.25rem] text-primary font-bold">สรุปข้อมูลที่กรอก</h3>
 <p class="text-on-surface-variant font-label-md text-label-md">กรุณาตรวจสอบความถูกต้องของข้อมูลก่อนกดตรวจสอบสิทธิ์</p>
 <dl class="grid grid-cols-1 md:grid-cols-2 gap-4" id="summaryList"></dl>
 <p class="text-on-surface-variant font-label-md text-label-md p-4 bg-surface-container-low rounded-lg flex gap-2">
-<span class="material-symbols-outlined text-[20px] shrink-0">info</span>
+<span class="material-symbols-outlined text-[1.25rem] shrink-0">info</span>
               ผลการตรวจสอบเป็นเพียงข้อมูลเบื้องต้นจากเงื่อนไขทั่วไป ไม่ใช่การยืนยันสิทธิ์อย่างเป็นทางการ กรุณายื่นเอกสารตัวจริงที่จุดบริการเพื่อยืนยันสิทธิ์
             </p>
 </div>
@@ -239,7 +238,7 @@
 <!-- Result Section -->
 <section class="hidden bg-surface-container-lowest border-2 border-outline-variant p-6 md:p-8 rounded-xl shadow-sm space-y-6" id="resultSection">
 <div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-secondary text-[32px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="material-symbols-outlined text-secondary text-[2rem]" style="font-variation-settings: 'FILL' 1;">verified</span>
 <h3 class="font-headline-md text-headline-md text-primary">ผลการตรวจสอบเบื้องต้น</h3>
 </div>
 <p aria-live="polite" aria-atomic="true" class="text-on-surface-variant font-body-md text-body-md" id="resultSummary"></p>
@@ -340,7 +339,7 @@
         circle.textContent = step;
         if (step < currentStep) {
           circle.classList.add("step-complete");
-          circle.innerHTML = '<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: \'wght\' 700;">check</span>';
+          circle.innerHTML = '<span class="material-symbols-outlined text-[1.25rem]" style="font-variation-settings: \'wght\' 700;">check</span>';
         } else if (step === currentStep) {
           circle.classList.add("step-active");
         } else {
@@ -460,11 +459,11 @@
           <img class="w-full h-full object-cover" src="${program.image}" alt=""/>
         </div>
         <div class="p-4 flex flex-col flex-grow">
-          <span class="inline-block px-3 py-1 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full text-[12px] font-bold mb-2 uppercase self-start" aria-hidden="true">${program.agency}</span>
-          <h4 class="font-headline-md text-primary mb-1 text-[18px] leading-tight">${program.title}</h4>
-          <p class="text-on-surface-variant font-body-md text-[16px] mb-2">${program.description}</p>
+          <span class="inline-block px-3 py-1 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full text-[0.75rem] font-bold mb-2 uppercase self-start" aria-hidden="true">${program.agency}</span>
+          <h4 class="font-headline-md text-primary mb-1 text-[1.125rem] leading-tight">${program.title}</h4>
+          <p class="text-on-surface-variant font-body-md text-[1rem] mb-2">${program.description}</p>
           <a href="program-detail.html#${encodeURIComponent(program.id)}" aria-label="ดูรายละเอียด: ${program.title}" class="mt-auto inline-flex items-center gap-1 text-primary font-bold hover:underline">
-            <span class="material-symbols-outlined text-[18px]" aria-hidden="true">info</span>ดูรายละเอียด
+            <span class="material-symbols-outlined text-[1.125rem]" aria-hidden="true">info</span>ดูรายละเอียด
           </a>
         </div>
       </article>`;

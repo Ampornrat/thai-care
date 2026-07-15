@@ -70,8 +70,8 @@ html {
     font-weight: 700;
 }
 
-/* Large-text accessibility mode */
-body.a11y-large-text {
+/* Large-text accessibility mode — apply on html so rem values scale globally */
+html.a11y-large-text {
     font-size: 112.5%;
 }
 

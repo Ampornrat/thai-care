@@ -17,7 +17,7 @@
 <header class="bg-surface dark:bg-surface-container border-b-2 border-outline-variant dark:border-outline sticky top-0 z-50">
 <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto h-20">
 <a class="flex items-center gap-4 focus-ring rounded" href="index.html">
-<div class="w-10 h-10 bg-primary flex items-center justify-center rounded">
+<div class="w-10 h-10 bg-primary flex items-center justify-center rounded" aria-hidden="true">
 <span class="material-symbols-outlined text-on-primary" style="font-variation-settings: 'FILL' 1;">diversity_1</span>
 </div>
 <h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary leading-none">ไทย Care</h1>
@@ -30,18 +30,18 @@
 <a class="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="contact.html">ติดต่อเรา</a>
 </nav>
 <div class="flex items-center gap-2">
-<button aria-label="สลับความต่างสี" class="p-2 hover:bg-surface-container-high rounded-full focus-ring transition-colors">
-<span class="material-symbols-outlined text-primary" data-icon="contrast">contrast</span>
+<button aria-label="สลับความต่างสี" aria-pressed="false" class="p-2 hover:bg-surface-container-high rounded-full focus-ring transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="contrast" aria-hidden="true">contrast</span>
 </button>
-<button aria-label="ปรับขนาดตัวอักษร" class="p-2 hover:bg-surface-container-high rounded-full focus-ring transition-colors">
-<span class="material-symbols-outlined text-primary" data-icon="format_size">format_size</span>
+<button aria-label="ปรับขนาดตัวอักษร" aria-pressed="false" class="p-2 hover:bg-surface-container-high rounded-full focus-ring transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="format_size" aria-hidden="true">format_size</span>
 </button>
-<div class="hidden md:flex flex-col items-end ml-4 border-l-2 border-outline-variant pl-4">
+<div class="hidden md:flex flex-col items-end ml-4 border-l-2 border-outline-variant pl-4" aria-hidden="true">
 <span class="text-[12px] font-bold text-on-surface-variant uppercase">สายด่วนรัฐบาล</span>
 <span class="font-hotline-display text-hotline-display text-primary leading-none">1111</span>
 </div>
-<button aria-expanded="false" aria-label="เปิดเมนู" class="lg:hidden p-2 hover:bg-surface-container-high rounded-full focus-ring transition-colors" id="mobileMenuBtn">
-<span class="material-symbols-outlined text-primary">menu</span>
+<button aria-expanded="false" aria-label="เปิดเมนู" aria-controls="mobileMenu" class="lg:hidden p-2 hover:bg-surface-container-high rounded-full focus-ring transition-colors" id="mobileMenuBtn">
+<span class="material-symbols-outlined text-primary" aria-hidden="true">menu</span>
 </button>
 </div>
 </div>
@@ -57,8 +57,8 @@
 </header>
 <nav aria-label="breadcrumb" class="max-w-7xl mx-auto w-full px-margin-mobile md:px-margin-desktop py-4 flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
 <a class="hover:underline" href="index.html">หน้าหลัก</a>
-<span class="material-symbols-outlined text-[16px]">chevron_right</span>
-<span class="text-primary font-bold">ค้นหาสวัสดิการ</span>
+<span class="material-symbols-outlined text-[16px]" aria-hidden="true">chevron_right</span>
+<span class="text-primary font-bold" aria-current="page">ค้นหาสวัสดิการ</span>
 </nav>
 <main id="main-content">
 <section class="pb-stack-lg">
@@ -94,7 +94,7 @@
 </button>
 </div>
 </div>
-<p class="font-label-md text-label-md text-on-surface-variant mb-4" id="resultCount"></p>
+<p aria-live="polite" aria-atomic="true" class="font-label-md text-label-md text-on-surface-variant mb-4" id="resultCount"></p>
 <!-- Results Grid -->
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-stack-md" id="resultsGrid"></div>
 <!-- Empty State -->
@@ -211,26 +211,26 @@
       return `
       <article class="bg-white border-2 border-outline-variant rounded-lg overflow-hidden flex flex-col h-full hover:border-secondary transition-colors ${isClosed ? "opacity-70" : ""}">
         <div class="h-48 overflow-hidden bg-surface-dim">
-          <img class="w-full h-full object-cover" src="${program.image}" alt="${program.title}"/>
+          <img class="w-full h-full object-cover" src="${program.image}" alt=""/>
         </div>
         <div class="p-6 flex flex-col flex-grow">
           <div class="mb-3">${renderStatusBadge(program)}</div>
           <p class="font-label-md text-[13px] text-on-surface-variant mb-1 flex items-center gap-1">
-            <span class="material-symbols-outlined text-[16px]">account_balance</span>${program.agency}
+            <span class="material-symbols-outlined text-[16px]" aria-hidden="true">account_balance</span>${program.agency}
           </p>
           <h4 class="font-headline-md text-primary mb-2 text-[20px] leading-tight">${program.title}</h4>
           <p class="text-on-surface-variant font-body-md text-body-md mb-6 line-clamp-3">${program.description}</p>
           <div class="mt-auto flex gap-2">
-            <a href="program-detail.html#${encodeURIComponent(program.id)}" class="flex-1 border-2 border-primary text-primary py-3 rounded font-bold flex items-center justify-center gap-2 hover:bg-primary-fixed transition-colors focus-ring">
-              <span class="material-symbols-outlined text-[20px]">info</span>ดูรายละเอียด
+            <a href="program-detail.html#${encodeURIComponent(program.id)}" aria-label="ดูรายละเอียด: ${program.title}" class="flex-1 border-2 border-primary text-primary py-3 rounded font-bold flex items-center justify-center gap-2 hover:bg-primary-fixed transition-colors focus-ring">
+              <span class="material-symbols-outlined text-[20px]" aria-hidden="true">info</span>ดูรายละเอียด
             </a>
             ${
               isClosed
                 ? `<span class="flex-1 bg-surface-container-high text-on-surface-variant py-3 rounded font-bold flex items-center justify-center gap-2">
-                    <span class="material-symbols-outlined text-[20px]">block</span>ปิดรับสมัคร
+                    <span class="material-symbols-outlined text-[20px]" aria-hidden="true">block</span>ปิดรับสมัคร
                   </span>`
-                : `<a href="eligibility.html?program=${encodeURIComponent(program.id)}" class="flex-1 bg-primary text-on-primary py-3 rounded font-bold flex items-center justify-center gap-2 hover:bg-primary-container transition-colors focus-ring">
-                    <span class="material-symbols-outlined text-[20px]">fact_check</span>ตรวจสอบสิทธิ์
+                : `<a href="eligibility.html?program=${encodeURIComponent(program.id)}" aria-label="ตรวจสอบสิทธิ์: ${program.title}" class="flex-1 bg-primary text-on-primary py-3 rounded font-bold flex items-center justify-center gap-2 hover:bg-primary-container transition-colors focus-ring">
+                    <span class="material-symbols-outlined text-[20px]" aria-hidden="true">fact_check</span>ตรวจสอบสิทธิ์
                   </a>`
             }
           </div>
@@ -266,17 +266,17 @@
         pagination.innerHTML = "";
         return;
       }
-      let html = `<button class="w-10 h-10 flex items-center justify-center rounded border-2 border-outline-variant hover:border-primary disabled:opacity-40 disabled:cursor-not-allowed focus-ring" data-page="${currentPage - 1}" ${currentPage === 1 ? "disabled" : ""}>
-        <span class="material-symbols-outlined">chevron_left</span>
+      let html = `<button aria-label="หน้าก่อนหน้า" class="w-10 h-10 flex items-center justify-center rounded border-2 border-outline-variant hover:border-primary disabled:opacity-40 disabled:cursor-not-allowed focus-ring" data-page="${currentPage - 1}" ${currentPage === 1 ? "disabled" : ""}>
+        <span class="material-symbols-outlined" aria-hidden="true">chevron_left</span>
       </button>`;
       for (let i = 1; i <= totalPages; i++) {
         const isActive = i === currentPage;
-        html += `<button class="w-10 h-10 flex items-center justify-center rounded border-2 font-bold focus-ring ${
+        html += `<button aria-label="หน้า ${i}" aria-current="${isActive ? "page" : "false"}" class="w-10 h-10 flex items-center justify-center rounded border-2 font-bold focus-ring ${
           isActive ? "bg-primary text-on-primary border-primary" : "border-outline-variant hover:border-primary text-on-surface"
         }" data-page="${i}">${i}</button>`;
       }
-      html += `<button class="w-10 h-10 flex items-center justify-center rounded border-2 border-outline-variant hover:border-primary disabled:opacity-40 disabled:cursor-not-allowed focus-ring" data-page="${currentPage + 1}" ${currentPage === totalPages ? "disabled" : ""}>
-        <span class="material-symbols-outlined">chevron_right</span>
+      html += `<button aria-label="หน้าถัดไป" class="w-10 h-10 flex items-center justify-center rounded border-2 border-outline-variant hover:border-primary disabled:opacity-40 disabled:cursor-not-allowed focus-ring" data-page="${currentPage + 1}" ${currentPage === totalPages ? "disabled" : ""}>
+        <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
       </button>`;
       pagination.innerHTML = html;
     }

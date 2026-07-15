@@ -17,7 +17,7 @@
 <header class="bg-surface dark:bg-surface-container border-b-2 border-outline-variant dark:border-outline sticky top-0 z-50">
 <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto h-20">
 <a class="flex items-center gap-4 focus-ring rounded" href="index.html">
-<div class="w-10 h-10 bg-primary flex items-center justify-center rounded">
+<div class="w-10 h-10 bg-primary flex items-center justify-center rounded" aria-hidden="true">
 <span class="material-symbols-outlined text-on-primary" style="font-variation-settings: 'FILL' 1;">diversity_1</span>
 </div>
 <h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary leading-none">ไทย Care</h1>
@@ -30,18 +30,18 @@
 <a class="text-on-surface-variant dark:text-surface-variant font-medium font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="contact.html">ติดต่อเรา</a>
 </nav>
 <div class="flex items-center gap-2">
-<button aria-label="สลับความต่างสี" class="p-2 hover:bg-surface-container-high rounded-full focus-ring transition-colors">
-<span class="material-symbols-outlined text-primary" data-icon="contrast">contrast</span>
+<button aria-label="สลับความต่างสี" aria-pressed="false" class="p-2 hover:bg-surface-container-high rounded-full focus-ring transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="contrast" aria-hidden="true">contrast</span>
 </button>
-<button aria-label="ปรับขนาดตัวอักษร" class="p-2 hover:bg-surface-container-high rounded-full focus-ring transition-colors">
-<span class="material-symbols-outlined text-primary" data-icon="format_size">format_size</span>
+<button aria-label="ปรับขนาดตัวอักษร" aria-pressed="false" class="p-2 hover:bg-surface-container-high rounded-full focus-ring transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="format_size" aria-hidden="true">format_size</span>
 </button>
-<div class="hidden md:flex flex-col items-end ml-4 border-l-2 border-outline-variant pl-4">
+<div class="hidden md:flex flex-col items-end ml-4 border-l-2 border-outline-variant pl-4" aria-hidden="true">
 <span class="text-[12px] font-bold text-on-surface-variant uppercase">สายด่วนรัฐบาล</span>
 <span class="font-hotline-display text-hotline-display text-primary leading-none">1111</span>
 </div>
-<button aria-expanded="false" aria-label="เปิดเมนู" class="lg:hidden p-2 hover:bg-surface-container-high rounded-full focus-ring transition-colors" id="mobileMenuBtn">
-<span class="material-symbols-outlined text-primary">menu</span>
+<button aria-expanded="false" aria-label="เปิดเมนู" aria-controls="mobileMenu" class="lg:hidden p-2 hover:bg-surface-container-high rounded-full focus-ring transition-colors" id="mobileMenuBtn">
+<span class="material-symbols-outlined text-primary" aria-hidden="true">menu</span>
 </button>
 </div>
 </div>
@@ -57,8 +57,8 @@
 </header>
 <nav aria-label="breadcrumb" class="max-w-7xl mx-auto w-full px-margin-mobile md:px-margin-desktop py-4 flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
 <a class="hover:underline" href="index.html">หน้าหลัก</a>
-<span class="material-symbols-outlined text-[16px]">chevron_right</span>
-<span class="text-primary font-bold">ตรวจสอบสิทธิ์สวัสดิการ</span>
+<span class="material-symbols-outlined text-[16px]" aria-hidden="true">chevron_right</span>
+<span class="text-primary font-bold" aria-current="page">ตรวจสอบสิทธิ์สวัสดิการ</span>
 </nav>
 <main class="w-full max-w-3xl mx-auto px-margin-mobile md:px-margin-desktop pb-stack-lg" id="main-content">
 <!-- Header Section -->
@@ -91,8 +91,8 @@
 <p class="text-center font-label-md text-label-md text-on-surface-variant" id="progressCaption">ขั้นตอนที่ 1 จาก 4: ข้อมูลส่วนตัว</p>
 </div>
 <!-- Error Summary -->
-<div class="hidden mb-stack-md p-4 bg-error-container border-l-4 border-error rounded-lg flex gap-4" id="error-box">
-<span class="material-symbols-outlined text-error">error</span>
+<div aria-live="assertive" aria-atomic="true" class="hidden mb-stack-md p-4 bg-error-container border-l-4 border-error rounded-lg flex gap-4" id="error-box" role="alert">
+<span class="material-symbols-outlined text-error" aria-hidden="true">error</span>
 <div>
 <p class="font-bold text-on-error-container">กรุณาตรวจสอบข้อมูล</p>
 <ul class="list-disc list-inside text-on-error-container font-label-md text-label-md" id="error-list"></ul>
@@ -103,27 +103,27 @@
 <!-- Step 1: Personal Info -->
 <div class="wizard-step active space-y-8" data-step="1">
 <div class="space-y-2">
-<label class="block font-headline-md text-[20px] text-primary font-bold" for="citizen_id">1. เลขบัตรประชาชน (13 หลัก) <span class="text-error">*</span></label>
-<input class="w-full h-touch-target px-4 border-2 border-outline-variant rounded-lg focus:ring-3 focus:ring-secondary focus:border-secondary outline-none transition-all" id="citizen_id" inputmode="numeric" maxlength="13" placeholder="เช่น 1103700xxxxxx" type="text"/>
+<label class="block font-headline-md text-[20px] text-primary font-bold" for="citizen_id">1. เลขบัตรประชาชน (13 หลัก) <span class="text-error" aria-hidden="true">*</span></label>
+<input aria-required="true" autocomplete="off" class="w-full h-touch-target px-4 border-2 border-outline-variant rounded-lg focus:ring-3 focus:ring-secondary focus:border-secondary outline-none transition-all" id="citizen_id" inputmode="numeric" maxlength="13" placeholder="เช่น 1103700xxxxxx" required type="text"/>
 </div>
 <div class="space-y-2">
-<label class="block font-headline-md text-[20px] text-primary font-bold" for="full_name">2. ชื่อ-นามสกุล <span class="text-error">*</span></label>
-<input class="w-full h-touch-target px-4 border-2 border-outline-variant rounded-lg focus:ring-3 focus:ring-secondary focus:border-secondary outline-none transition-all" id="full_name" placeholder="ชื่อ นามสกุล" type="text"/>
+<label class="block font-headline-md text-[20px] text-primary font-bold" for="full_name">2. ชื่อ-นามสกุล <span class="text-error" aria-hidden="true">*</span></label>
+<input aria-required="true" autocomplete="name" class="w-full h-touch-target px-4 border-2 border-outline-variant rounded-lg focus:ring-3 focus:ring-secondary focus:border-secondary outline-none transition-all" id="full_name" placeholder="ชื่อ นามสกุล" required type="text"/>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 <div class="space-y-2">
-<label class="block font-headline-md text-[20px] text-primary font-bold" for="age">3. อายุ (ปี) <span class="text-error">*</span></label>
-<input class="w-full h-touch-target px-4 border-2 border-outline-variant rounded-lg focus:ring-3 focus:ring-secondary focus:border-secondary outline-none transition-all" id="age" max="120" min="0" placeholder="0" type="number"/>
+<label class="block font-headline-md text-[20px] text-primary font-bold" for="age">3. อายุ (ปี) <span class="text-error" aria-hidden="true">*</span></label>
+<input aria-required="true" autocomplete="off" class="w-full h-touch-target px-4 border-2 border-outline-variant rounded-lg focus:ring-3 focus:ring-secondary focus:border-secondary outline-none transition-all" id="age" max="120" min="0" placeholder="0" required type="number"/>
 </div>
 <div class="space-y-2">
-<label class="block font-headline-md text-[20px] text-primary font-bold" for="province">4. จังหวัดตามทะเบียนบ้าน <span class="text-error">*</span></label>
-<select class="w-full h-touch-target px-4 border-2 border-outline-variant rounded-lg focus:ring-3 focus:ring-secondary focus:border-secondary outline-none transition-all" id="province">
+<label class="block font-headline-md text-[20px] text-primary font-bold" for="province">4. จังหวัดตามทะเบียนบ้าน <span class="text-error" aria-hidden="true">*</span></label>
+<select aria-required="true" autocomplete="address-level1" class="w-full h-touch-target px-4 border-2 border-outline-variant rounded-lg focus:ring-3 focus:ring-secondary focus:border-secondary outline-none transition-all" id="province" required>
 <option value="">เลือกจังหวัด</option>
 </select>
 </div>
 </div>
 <fieldset class="space-y-4">
-<legend class="font-headline-md text-[20px] text-primary font-bold">5. ท่านมีบัตรประจำตัวคนพิการหรือไม่ <span class="text-error">*</span></legend>
+<legend class="font-headline-md text-[20px] text-primary font-bold">5. ท่านมีบัตรประจำตัวคนพิการหรือไม่ <span class="text-error" aria-hidden="true">*</span></legend>
 <div class="flex flex-col md:flex-row gap-4">
 <label class="flex-1 flex items-center gap-4 p-4 border-2 border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container transition-colors focus-within:ring-3 focus-within:ring-secondary">
 <input class="w-5 h-5 text-secondary border-outline focus:ring-secondary" name="has_disability_card" type="radio" value="yes"/>
@@ -139,7 +139,7 @@
 <!-- Step 2: Family Status -->
 <div class="wizard-step space-y-8" data-step="2">
 <fieldset class="space-y-4">
-<legend class="font-headline-md text-[20px] text-primary font-bold">1. สถานภาพการสมรส <span class="text-error">*</span></legend>
+<legend class="font-headline-md text-[20px] text-primary font-bold">1. สถานภาพการสมรส <span class="text-error" aria-hidden="true">*</span></legend>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 <label class="flex items-center gap-4 p-4 border-2 border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container transition-colors focus-within:ring-3 focus-within:ring-secondary">
 <input class="w-5 h-5 text-secondary border-outline focus:ring-secondary" name="marital_status" type="radio" value="single"/>
@@ -160,15 +160,15 @@
 </div>
 </fieldset>
 <div class="space-y-4">
-<label class="block font-headline-md text-[20px] text-primary font-bold" for="children_count">2. จำนวนบุตร (อายุไม่เกิน 18 ปี) <span class="text-error">*</span></label>
-<p class="text-on-surface-variant font-label-md text-label-md">หากไม่มี ให้ระบุเป็น 0</p>
+<label class="block font-headline-md text-[20px] text-primary font-bold" for="children_count">2. จำนวนบุตร (อายุไม่เกิน 18 ปี) <span class="text-error" aria-hidden="true">*</span></label>
+<p class="text-on-surface-variant font-label-md text-label-md" id="children_count_hint">หากไม่มี ให้ระบุเป็น 0</p>
 <div class="relative max-w-[200px]">
-<input class="w-full h-touch-target px-4 border-2 border-outline-variant rounded-lg focus:ring-3 focus:ring-secondary focus:border-secondary outline-none transition-all" id="children_count" max="20" min="0" placeholder="0" type="number"/>
+<input aria-describedby="children_count_hint" aria-required="true" class="w-full h-touch-target px-4 border-2 border-outline-variant rounded-lg focus:ring-3 focus:ring-secondary focus:border-secondary outline-none transition-all" id="children_count" max="20" min="0" placeholder="0" required type="number"/>
 <div class="absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">คน</div>
 </div>
 </div>
 <fieldset class="space-y-4">
-<legend class="font-headline-md text-[20px] text-primary font-bold">3. การดูแลบุคคลในครอบครัว <span class="text-error">*</span></legend>
+<legend class="font-headline-md text-[20px] text-primary font-bold">3. การดูแลบุคคลในครอบครัว <span class="text-error" aria-hidden="true">*</span></legend>
 <p class="text-on-surface-variant font-label-md text-label-md">ท่านเป็นผู้ดูแลหลักของบุคคลที่อยู่ในภาวะพึ่งพิง (ผู้สูงอายุ 60 ปีขึ้นไป หรือผู้พิการ) ใช่หรือไม่?</p>
 <div class="flex flex-col md:flex-row gap-4">
 <label class="flex-1 flex items-center gap-4 p-4 border-2 border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container transition-colors focus-within:ring-3 focus-within:ring-secondary">
@@ -185,8 +185,8 @@
 <!-- Step 3: Income Info -->
 <div class="wizard-step space-y-8" data-step="3">
 <div class="space-y-2">
-<label class="block font-headline-md text-[20px] text-primary font-bold" for="occupation">1. อาชีพ <span class="text-error">*</span></label>
-<select class="w-full h-touch-target px-4 border-2 border-outline-variant rounded-lg focus:ring-3 focus:ring-secondary focus:border-secondary outline-none transition-all" id="occupation">
+<label class="block font-headline-md text-[20px] text-primary font-bold" for="occupation">1. อาชีพ <span class="text-error" aria-hidden="true">*</span></label>
+<select aria-required="true" class="w-full h-touch-target px-4 border-2 border-outline-variant rounded-lg focus:ring-3 focus:ring-secondary focus:border-secondary outline-none transition-all" id="occupation" required>
 <option value="">เลือกอาชีพ</option>
 <option value="government">รับราชการ / รัฐวิสาหกิจ</option>
 <option value="private">พนักงานเอกชน</option>
@@ -197,11 +197,11 @@
 </select>
 </div>
 <div class="space-y-2">
-<label class="block font-headline-md text-[20px] text-primary font-bold" for="monthly_income">2. รายได้เฉลี่ยต่อเดือน (บาท) <span class="text-error">*</span></label>
-<input class="w-full h-touch-target px-4 border-2 border-outline-variant rounded-lg focus:ring-3 focus:ring-secondary focus:border-secondary outline-none transition-all" id="monthly_income" min="0" placeholder="0" type="number"/>
+<label class="block font-headline-md text-[20px] text-primary font-bold" for="monthly_income">2. รายได้เฉลี่ยต่อเดือน (บาท) <span class="text-error" aria-hidden="true">*</span></label>
+<input aria-required="true" class="w-full h-touch-target px-4 border-2 border-outline-variant rounded-lg focus:ring-3 focus:ring-secondary focus:border-secondary outline-none transition-all" id="monthly_income" min="0" placeholder="0" required type="number"/>
 </div>
 <fieldset class="space-y-4">
-<legend class="font-headline-md text-[20px] text-primary font-bold">3. ท่านหรือคู่สมรสเป็นเจ้าของกรรมสิทธิ์ที่ดิน/อสังหาริมทรัพย์หรือไม่ <span class="text-error">*</span></legend>
+<legend class="font-headline-md text-[20px] text-primary font-bold">3. ท่านหรือคู่สมรสเป็นเจ้าของกรรมสิทธิ์ที่ดิน/อสังหาริมทรัพย์หรือไม่ <span class="text-error" aria-hidden="true">*</span></legend>
 <div class="flex flex-col md:flex-row gap-4">
 <label class="flex-1 flex items-center gap-4 p-4 border-2 border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container transition-colors focus-within:ring-3 focus-within:ring-secondary">
 <input class="w-5 h-5 text-secondary border-outline focus:ring-secondary" name="owns_property" type="radio" value="yes"/>
@@ -242,7 +242,7 @@
 <span class="material-symbols-outlined text-secondary text-[32px]" style="font-variation-settings: 'FILL' 1;">verified</span>
 <h3 class="font-headline-md text-headline-md text-primary">ผลการตรวจสอบเบื้องต้น</h3>
 </div>
-<p class="text-on-surface-variant font-body-md text-body-md" id="resultSummary"></p>
+<p aria-live="polite" aria-atomic="true" class="text-on-surface-variant font-body-md text-body-md" id="resultSummary"></p>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter" id="resultPrograms"></div>
 <div class="flex flex-col md:flex-row gap-4 pt-4 border-t border-outline-variant">
 <button class="flex-1 h-touch-target flex items-center justify-center gap-2 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary-fixed transition-colors focus:ring-3 focus:ring-secondary outline-none" id="restartBtn" type="button">
@@ -457,14 +457,14 @@
       return `
       <article class="bg-white border-2 border-outline-variant rounded-lg overflow-hidden flex flex-col h-full">
         <div class="h-40 overflow-hidden bg-surface-dim">
-          <img class="w-full h-full object-cover" src="${program.image}" alt="${program.title}"/>
+          <img class="w-full h-full object-cover" src="${program.image}" alt=""/>
         </div>
         <div class="p-4 flex flex-col flex-grow">
-          <span class="inline-block px-3 py-1 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full text-[12px] font-bold mb-2 uppercase self-start">${program.agency}</span>
+          <span class="inline-block px-3 py-1 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full text-[12px] font-bold mb-2 uppercase self-start" aria-hidden="true">${program.agency}</span>
           <h4 class="font-headline-md text-primary mb-1 text-[18px] leading-tight">${program.title}</h4>
           <p class="text-on-surface-variant font-body-md text-[16px] mb-2">${program.description}</p>
-          <a href="program-detail.html#${encodeURIComponent(program.id)}" class="mt-auto inline-flex items-center gap-1 text-primary font-bold hover:underline">
-            <span class="material-symbols-outlined text-[18px]">info</span>ดูรายละเอียด
+          <a href="program-detail.html#${encodeURIComponent(program.id)}" aria-label="ดูรายละเอียด: ${program.title}" class="mt-auto inline-flex items-center gap-1 text-primary font-bold hover:underline">
+            <span class="material-symbols-outlined text-[18px]" aria-hidden="true">info</span>ดูรายละเอียด
           </a>
         </div>
       </article>`;

@@ -9,27 +9,41 @@
   let isPaused = false;
 
   if (toggleBtn && marquee && marqueeIcon) {
+    toggleBtn.setAttribute("aria-pressed", "false");
     toggleBtn.addEventListener("click", () => {
       isPaused = !isPaused;
       marquee.classList.toggle("paused", isPaused);
       marqueeIcon.textContent = isPaused ? "play_circle" : "pause_circle";
+      toggleBtn.setAttribute("aria-label", isPaused ? "เล่นข้อความวิ่ง" : "หยุดข้อความวิ่ง");
       toggleBtn.setAttribute("aria-pressed", String(isPaused));
     });
   }
 
-  // Contrast (dark mode) toggle
+  // High-contrast accessibility toggle (persists across pages)
   const contrastBtn = document.querySelector('[data-icon="contrast"]')?.parentElement;
   if (contrastBtn) {
+    const initialContrast = localStorage.getItem("thaicare-high-contrast") === "on";
+    if (initialContrast) {
+      document.documentElement.classList.add("high-contrast");
+    }
+    contrastBtn.setAttribute("aria-pressed", String(initialContrast));
     contrastBtn.addEventListener("click", () => {
-      document.documentElement.classList.toggle("dark");
+      const isOn = document.documentElement.classList.toggle("high-contrast");
+      contrastBtn.setAttribute("aria-pressed", String(isOn));
+      localStorage.setItem("thaicare-high-contrast", isOn ? "on" : "off");
     });
   }
 
   // Font size toggle
   const fontBtn = document.querySelector('[data-icon="format_size"]')?.parentElement;
   if (fontBtn) {
+    const savedLargeText = localStorage.getItem("thaicare-large-text") === "on";
+    if (savedLargeText) document.body.classList.add("a11y-large-text");
+    fontBtn.setAttribute("aria-pressed", String(savedLargeText));
     fontBtn.addEventListener("click", () => {
-      document.body.classList.toggle("a11y-large-text");
+      const isLarge = document.body.classList.toggle("a11y-large-text");
+      fontBtn.setAttribute("aria-pressed", String(isLarge));
+      localStorage.setItem("thaicare-large-text", isLarge ? "on" : "off");
     });
   }
 
@@ -37,9 +51,11 @@
   const menuBtn = document.getElementById("mobileMenuBtn");
   const mobileMenu = document.getElementById("mobileMenu");
   if (menuBtn && mobileMenu) {
+    menuBtn.setAttribute("aria-controls", "mobileMenu");
     menuBtn.addEventListener("click", () => {
       const isOpen = mobileMenu.classList.toggle("open");
       menuBtn.setAttribute("aria-expanded", String(isOpen));
+      menuBtn.setAttribute("aria-label", isOpen ? "ปิดเมนู" : "เปิดเมนู");
       menuBtn.querySelector(".material-symbols-outlined").textContent = isOpen
         ? "close"
         : "menu";
